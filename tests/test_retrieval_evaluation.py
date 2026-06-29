@@ -59,10 +59,15 @@ class RetrievalEvaluationTests(unittest.TestCase):
         self.assertEqual((result.passed, result.top1, result.mrr), (1, 0, 0.5))
 
     def test_acceptable_alternative_can_satisfy_case(self):
+        source = self.root / "knowledge" / "obsidian" / "sources" / "source.md"
+        source.write_text(
+            "---\nstatus: accepted\n---\nGraph evidence.\nOther evidence.\n",
+            encoding="utf-8",
+        )
         benchmark = {
             "cases": [{
                 "query": "graph",
-                "expected": [{"path": "knowledge/obsidian/sources/source.md", "line": 99}],
+                "expected": [{"path": "knowledge/obsidian/sources/source.md", "line": 5}],
                 "acceptable_any": [{"path": "knowledge/obsidian/sources/source.md", "line": 4}],
             }]
         }
@@ -70,6 +75,17 @@ class RetrievalEvaluationTests(unittest.TestCase):
         result = evaluate(benchmark, self.root)
 
         self.assertEqual((result.passed, result.top1, result.mrr), (1, 1, 1.0))
+
+    def test_benchmark_rejects_non_evidence_citation(self):
+        benchmark = {
+            "cases": [{
+                "query": "graph",
+                "expected": [{"path": "knowledge/obsidian/sources/source.md", "line": 2}],
+            }]
+        }
+
+        with self.assertRaisesRegex(ValueError, "non-evidence line"):
+            evaluate(benchmark, self.root)
 
 
 if __name__ == "__main__":

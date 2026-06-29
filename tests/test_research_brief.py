@@ -65,6 +65,21 @@ class ResearchBriefTests(unittest.TestCase):
         errors = validate_research_brief(brief(f"{source}:4"), self.root)
         self.assertTrue(any("unaccepted source" in error for error in errors))
 
+    def test_heading_is_not_citable_evidence(self):
+        source = "knowledge/obsidian/sources/source.md"
+        (self.root / source).write_text(
+            "---\nstatus: accepted\n---\n# Evidence heading\nEvidence line.\n",
+            encoding="utf-8",
+        )
+        errors = validate_research_brief(brief(f"{source}:4"), self.root)
+        self.assertTrue(any("non-evidence line" in error for error in errors))
+
+    def test_unknown_status_fails(self):
+        source = self.write_source()
+        text = brief(f"{source}:4").replace("status: draft", "status: complete")
+        errors = validate_research_brief(text, self.root)
+        self.assertTrue(any("status must be one of" in error for error in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

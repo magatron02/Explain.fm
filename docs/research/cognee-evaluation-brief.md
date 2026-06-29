@@ -1,9 +1,10 @@
 ---
 type: research-brief
-status: draft
+status: superseded
 question: "Is Cognee ready to become Explain.fm's knowledge-graph dependency?"
 audience: "Explain.fm engineering and product"
 created: "2026-06-29"
+superseded_by: "docs/rfc/0001-cognee-retrieval-spike.md"
 ---
 
 # Cognee Evaluation Brief
@@ -27,10 +28,10 @@ The official sources are consistent at this level, but they are not independent.
 
 ## Open questions
 
-- Can retrieved claims be traced to the exact source passage after graph construction?
-- Does Cognee outperform the linear lexical baseline on a small Explain.fm corpus?
-- What are the minimum storage, model, latency, and deletion requirements?
+- Can a future version retain exact source passages after processing?
+- Can it beat the current retrieval baseline on an unchanged benchmark?
+- Can it demonstrate acceptable storage, model, latency, cleanup, and deletion behavior?
 
 ## Recommendation
 
-Do not adopt Cognee yet. Run a bounded spike against the current source corpus and compare citation fidelity with `packages/research/search.py` before writing an ADR.
+Do not adopt Cognee. The bounded experiment in `docs/rfc/0001-cognee-retrieval-spike.md` crossed the rejection boundary by losing exact provenance; this brief is retained only as the source-backed input to that decision.

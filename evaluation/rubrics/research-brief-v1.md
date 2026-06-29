@@ -6,7 +6,7 @@ Use this rubric after automated validation. Do not average away a failed trust g
 
 - Every cited file exists under `knowledge/obsidian/sources/`.
 - Every cited source has `status: accepted`.
-- Every cited line exists and is non-empty.
+- Every cited line exists in the accepted source body and is citable evidence, not frontmatter, a heading, a checklist, or table structure.
 - Repository retrieval benchmarks match their recorded baselines.
 
 Any automated-gate failure rejects the brief.

@@ -12,6 +12,7 @@ REPO_ROOT = Path(__file__).parents[2]
 sys.path.insert(0, str(REPO_ROOT))
 
 from packages.research.search import search_sources
+from packages.research.brief import validate_source_citation
 
 DEFAULT_BENCHMARK = Path("evaluation/benchmarks/cognee-retrieval.json")
 
@@ -39,6 +40,15 @@ def evaluate(
     passed = 0
 
     for case in cases:
+        if not case.get("query"):
+            raise ValueError("retrieval case query is required")
+        citations = case.get("expected", []) + case.get("acceptable_any", [])
+        if not citations:
+            raise ValueError(f'{case["query"]}: expected or acceptable_any citation is required')
+        for citation in citations:
+            error = validate_source_citation(citation["path"], int(citation["line"]), repo_root)
+            if error:
+                raise ValueError(f'{case["query"]}: {error}')
         hits = search(case["query"], source_dir, limit)
         actual = [(hit.path.resolve(), hit.line) for hit in hits]
         actual_set = set(actual)
