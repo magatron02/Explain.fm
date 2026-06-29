@@ -49,6 +49,12 @@ Run the complete local quality gate:
 python -m unittest discover -s tests -v
 ```
 
+Check Obsidian knowledge links directly:
+
+```bash
+python packages/core/wiki_links.py
+```
+
 ## License
 
 This repository is available under the existing [MIT License](LICENSE).

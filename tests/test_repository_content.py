@@ -11,9 +11,13 @@ sys.path.insert(0, str(ROOT))
 from brief import validate_research_brief
 from packages.evaluation.retrieval import evaluate
 from source_note import validate_source_note
+from wiki_links import validate_knowledge_links
 
 
 class RepositoryContentTests(unittest.TestCase):
+    def test_knowledge_wikilinks_resolve_uniquely(self):
+        self.assertEqual(validate_knowledge_links(ROOT), [])
+
     def test_all_accepted_source_notes_are_valid(self):
         source_dir = ROOT / "knowledge" / "obsidian" / "sources"
         notes = [path for path in source_dir.glob("*.md") if path.name != "README.md"]
