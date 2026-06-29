@@ -1,6 +1,6 @@
 # RFC 0001: Cognee Retrieval Spike
 
-- Status: Proposed
+- Status: Rejected for now
 - Date: 2026-06-29
 - Owner: Founding AI Tech Lead
 
@@ -45,6 +45,10 @@ The project Codex setting (`gpt-5.5`, medium reasoning) controls the engineering
 ## Rejection criteria
 
 Reject or defer Cognee if provenance is lost, deletion cannot be verified, paraphrase recall remains below 3/4, or operational complexity is unjustified for the measured improvement.
+
+## Outcome
+
+The local smoke test completed `remember`, `recall`, and `forget`, but recall reduced cited evidence to generated text without its source path and line. Structured-output retries also made the two-item run take about 204 seconds. This fails the provenance and operational-cost criteria, so Cognee is not adopted. See [`evaluation/metrics/cognee-local-smoke.md`](../../evaluation/metrics/cognee-local-smoke.md).
 
 ## Non-goals
 

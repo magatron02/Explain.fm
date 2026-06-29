@@ -49,6 +49,8 @@ Run the complete local quality gate:
 python -m unittest discover -s tests -v
 ```
 
+The rejected local Cognee experiment and its reproducible model route are recorded in [RFC 0001](docs/rfc/0001-cognee-retrieval-spike.md). Copy `.env.example` to `.env` only when reproducing that spike; Cognee is not an adopted runtime dependency.
+
 Check Obsidian knowledge links directly:
 
 ```bash
