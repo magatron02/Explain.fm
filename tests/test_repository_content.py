@@ -15,6 +15,13 @@ from wiki_links import validate_knowledge_links
 
 
 class RepositoryContentTests(unittest.TestCase):
+    def test_architecture_pipeline_matches_founder_contract(self):
+        pipeline = (
+            "Sources → Collection → Cleaning → Obsidian Vault → Cognee Memory / Knowledge Graph → "
+            "Research Agent → Story Planner → Script Generator → VoxCPM Voice → Audio Episode → Evaluation"
+        )
+        self.assertIn(pipeline, (ROOT / "ARCHITECTURE.md").read_text(encoding="utf-8"))
+
     def test_knowledge_wikilinks_resolve_uniquely(self):
         self.assertEqual(validate_knowledge_links(ROOT), [])
 
