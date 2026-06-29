@@ -1,6 +1,6 @@
 # Obsidian Knowledge
 
-The repository root is the Explain.fm Obsidian vault. This directory is the human-readable ingest workspace.
+The repository root `ExplainFM_Project` is the primary Obsidian vault. This directory is the human-readable ingest workspace inside that vault; do not open it as a separate vault.
 
 ## Structure
 
