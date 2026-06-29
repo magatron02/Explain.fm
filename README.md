@@ -24,6 +24,12 @@ Search accepted sources with line-level provenance:
 python packages/research/search.py "provenance graph"
 ```
 
+Build an evidence-only handoff for research:
+
+```bash
+python packages/research/evidence_pack.py "How does Cognee preserve provenance?"
+```
+
 Validate a research brief and every cited source line:
 
 ```bash

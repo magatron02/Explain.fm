@@ -50,6 +50,16 @@ class SearchTests(unittest.TestCase):
 
             self.assertEqual(search_sources("what is the", root), [])
 
+    def test_markdown_headings_are_not_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "source.md").write_text(
+                "---\nstatus: accepted\n---\n# Provenance\nBody without the query.\n",
+                encoding="utf-8",
+            )
+
+            self.assertEqual(search_sources("provenance", root), [])
+
 
 if __name__ == "__main__":
     unittest.main()

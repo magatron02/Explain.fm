@@ -39,6 +39,11 @@ def _accepted_body_start(lines: list[str]) -> int | None:
     return None
 
 
+def _searchable(line: str) -> bool:
+    stripped = line.strip()
+    return bool(stripped) and not stripped.startswith(("#", "- [")) and not re.fullmatch(r"\|?[ |:-]+\|?", stripped)
+
+
 def search_sources(query: str, source_dir: Path = DEFAULT_SOURCE_DIR, limit: int = 5) -> list[SearchHit]:
     query_tokens = set(_tokens(query))
     if not query_tokens or limit < 1:
@@ -52,6 +57,8 @@ def search_sources(query: str, source_dir: Path = DEFAULT_SOURCE_DIR, limit: int
         if body_start is None:
             continue
         for number, line in enumerate(lines[body_start:], start=body_start + 1):
+            if not _searchable(line):
+                continue
             line_tokens = _tokens(line)
             score = sum(line_tokens.count(token) for token in query_tokens)
             if score:
