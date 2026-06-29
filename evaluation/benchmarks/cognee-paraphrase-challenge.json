@@ -26,6 +26,18 @@
       "expected": [
         {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 36}
       ]
+    },
+    {
+      "query": "Where is note metadata physically written?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 35}
+      ]
+    },
+    {
+      "query": "What happens to references after changing a filename?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 34}
+      ]
     }
   ]
 }

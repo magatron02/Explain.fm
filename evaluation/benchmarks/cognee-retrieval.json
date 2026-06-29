@@ -32,6 +32,30 @@
       "expected": [
         {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 35}
       ]
+    },
+    {
+      "query": "properties YAML Markdown",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 35}
+      ]
+    },
+    {
+      "query": "property templates merge",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 34}
+      ]
+    },
+    {
+      "query": "Wikilink Markdown internal-link formats",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 33}
+      ]
+    },
+    {
+      "query": "block references standard Markdown outside Obsidian",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 36}
+      ]
     }
   ]
 }
