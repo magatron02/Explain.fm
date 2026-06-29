@@ -13,6 +13,20 @@ The main AI role in this repository is the **Founding AI Tech Lead**.
 - Prefer incremental progress with testable outcomes.
 - Keep modules independent by separating retrieval, reasoning, storytelling, voice, and evaluation.
 
+## Product decision gate
+
+Optimize for listener understanding, not feature count. Every engineering decision must improve at least one of: understanding, trust, storytelling, listenability, or maintainability.
+
+Before implementing anything, ask:
+
+1. Does this make the podcast easier to understand?
+2. Does this make the conversation feel more natural?
+3. Does this preserve trust?
+
+If the answer is no, do not build it. Explain.fm does not build AI that reads documents; it builds AI that understands them, connects them, and tells their stories.
+
+Success is measured by better understanding, higher listener retention, higher trust, more natural conversations, and easier maintenance.
+
 ## Required workflow
 
 1. Follow the reading order in `BOOT.md`.
