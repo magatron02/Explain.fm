@@ -48,7 +48,7 @@ Reject or defer Cognee if provenance is lost, deletion cannot be verified, parap
 
 ## Outcome
 
-The local smoke test completed `remember`, `recall`, and `forget`, but recall reduced cited evidence to generated text without its source path and line. Structured-output retries also made the two-item run take about 204 seconds. This fails the provenance and operational-cost criteria, so Cognee is not adopted. See [`evaluation/metrics/cognee-local-smoke.md`](../../evaluation/metrics/cognee-local-smoke.md). The smaller direct-embedding alternative is recorded in [`evaluation/metrics/semantic-local-baseline.md`](../../evaluation/metrics/semantic-local-baseline.md).
+The smoke test completed `remember`, `recall`, and `forget`, but recall reduced cited evidence to generated text without its source path and line. Structured-output retries also made the two-item run take about 204 seconds. This fails the provenance and operational-cost criteria, so Cognee is not adopted.
 
 ## Non-goals
 

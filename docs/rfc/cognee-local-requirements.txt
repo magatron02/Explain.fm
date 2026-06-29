@@ -1,1 +1,0 @@
-cognee[ollama]==1.2.2
