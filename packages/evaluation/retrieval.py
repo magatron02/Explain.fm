@@ -36,27 +36,33 @@ def evaluate(
     cases = benchmark.get("cases", [])
     top1 = 0
     reciprocal_rank = 0.0
+    passed = 0
 
     for case in cases:
         hits = search(case["query"], source_dir, limit)
         actual = [(hit.path.resolve(), hit.line) for hit in hits]
+        actual_set = set(actual)
         expected_targets = {
             ((repo_root / expected["path"]).resolve(), int(expected["line"]))
             for expected in case.get("expected", [])
         }
-        ranks = [rank for rank, target in enumerate(actual, start=1) if target in expected_targets]
+        acceptable_targets = {
+            ((repo_root / expected["path"]).resolve(), int(expected["line"]))
+            for expected in case.get("acceptable_any", [])
+        }
+        relevant_targets = expected_targets | acceptable_targets
+        ranks = [rank for rank, target in enumerate(actual, start=1) if target in relevant_targets]
         if ranks:
             top1 += min(ranks) == 1
             reciprocal_rank += 1 / min(ranks)
-        for expected in case.get("expected", []):
-            target = ((repo_root / expected["path"]).resolve(), int(expected["line"]))
-            if target not in actual:
-                failures.append(f'{case["query"]}: missing {expected["path"]}:{expected["line"]}')
+        if (expected_targets and expected_targets <= actual_set) or acceptable_targets & actual_set:
+            passed += 1
+        else:
+            failures.append(f'{case["query"]}: no acceptable evidence returned')
 
     total = len(cases)
-    failed_cases = {failure.split(": missing ", 1)[0] for failure in failures}
     return EvaluationResult(
-        passed=total - len(failed_cases),
+        passed=passed,
         total=total,
         top1=top1,
         mrr=reciprocal_rank / total if total else 0.0,

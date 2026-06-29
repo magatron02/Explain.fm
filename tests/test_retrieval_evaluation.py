@@ -58,6 +58,19 @@ class RetrievalEvaluationTests(unittest.TestCase):
 
         self.assertEqual((result.passed, result.top1, result.mrr), (1, 0, 0.5))
 
+    def test_acceptable_alternative_can_satisfy_case(self):
+        benchmark = {
+            "cases": [{
+                "query": "graph",
+                "expected": [{"path": "knowledge/obsidian/sources/source.md", "line": 99}],
+                "acceptable_any": [{"path": "knowledge/obsidian/sources/source.md", "line": 4}],
+            }]
+        }
+
+        result = evaluate(benchmark, self.root)
+
+        self.assertEqual((result.passed, result.top1, result.mrr), (1, 1, 1.0))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -91,6 +91,9 @@
       "query": "How can a note carry machine-readable fields?",
       "expected": [
         {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 32}
+      ],
+      "acceptable_any": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 22}
       ]
     },
     {

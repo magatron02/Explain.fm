@@ -5,6 +5,7 @@
 - Keep deterministic checks separate from model- or human-judged evaluation.
 - Version fixtures, rubrics, benchmark sets, prompts, and model configuration used by a result.
 - Add a regression case for every confirmed failure that can be reproduced reliably.
+- Add retrieval `acceptable_any` citations only after evidence review; they represent genuinely equivalent answers, not score tuning.
 - Never label a test or evaluation passed when required evidence is absent.
 
 Tooling and test frameworks will be chosen with the first implementation slice.
