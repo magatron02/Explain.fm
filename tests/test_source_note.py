@@ -24,6 +24,9 @@ usage_rights: "quotation with attribution"
 ## Why this source matters
 ## Scope
 ## Key claims and evidence
+| Claim | Evidence or location | Confidence |
+| --- | --- | --- |
+| Supported fact. | Official section | High |
 ## Limitations and uncertainty
 ## Raw artifact
 ## Derived notes
@@ -47,6 +50,10 @@ class SourceNoteValidationTests(unittest.TestCase):
     def test_accepted_note_requires_completed_review(self):
         errors = validate_source_note(source_note(status="accepted"))
         self.assertEqual(len([error for error in errors if "incomplete review" in error]), len(REVIEW_ITEMS))
+
+    def test_accepted_note_with_completed_review_is_valid(self):
+        note = source_note(status="accepted").replace("- [ ]", "- [x]")
+        self.assertEqual(validate_source_note(note), [])
 
 
 if __name__ == "__main__":

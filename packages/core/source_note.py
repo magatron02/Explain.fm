@@ -53,6 +53,23 @@ def _frontmatter(text: str) -> tuple[dict[str, str], list[str]]:
     return values, []
 
 
+def _claim_rows(text: str) -> list[list[str]]:
+    rows: list[list[str]] = []
+    in_claims = False
+    for line in text.splitlines():
+        if line == "## Key claims and evidence":
+            in_claims = True
+            continue
+        if in_claims and line.startswith("## "):
+            break
+        if not in_claims or not line.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in line.split("|")[1:-1]]
+        if cells and cells[0].lower() != "claim" and not all(set(cell) <= {"-", ":"} for cell in cells):
+            rows.append(cells)
+    return rows
+
+
 def validate_source_note(text: str) -> list[str]:
     metadata, errors = _frontmatter(text)
     if errors:
@@ -79,6 +96,12 @@ def validate_source_note(text: str) -> list[str]:
             errors.append(f"missing section: {heading}")
 
     if status == "accepted":
+        claims = _claim_rows(text)
+        if not claims:
+            errors.append("accepted source requires at least one claim row")
+        for index, cells in enumerate(claims, start=1):
+            if len(cells) != 3 or not all(cells):
+                errors.append(f"claim row {index} requires claim, evidence location, and confidence")
         for item in REVIEW_ITEMS:
             if not re.search(rf"^- \[[xX]\] {re.escape(item)}$", text, re.MULTILINE):
                 errors.append(f"accepted source has incomplete review: {item}")
