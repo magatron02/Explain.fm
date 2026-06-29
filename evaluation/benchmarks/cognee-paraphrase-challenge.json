@@ -1,7 +1,7 @@
 {
   "name": "cognee-paraphrase-challenge-v1",
   "limit": 5,
-  "expected_passed": 0,
+  "expected_passed": 7,
   "cases": [
     {
       "query": "Which component keeps track of where information came from?",
@@ -37,6 +37,78 @@
       "query": "What happens to references after changing a filename?",
       "expected": [
         {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 34}
+      ]
+    },
+    {
+      "query": "What approach combines meaning-based lookup with explicit connections?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 32}
+      ]
+    },
+    {
+      "query": "Can this memory tool run on infrastructure I control and build linked knowledge?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 32}
+      ]
+    },
+    {
+      "query": "Which interpreter versions can I use for the starter example, and what credential is needed?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 34}
+      ]
+    },
+    {
+      "query": "Under what terms may the repository be reused?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 35}
+      ]
+    },
+    {
+      "query": "What feature turns separate notes into a navigable web?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 32}
+      ]
+    },
+    {
+      "query": "Which two syntaxes can point from one note to another?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 33}
+      ]
+    },
+    {
+      "query": "Can a reference jump somewhere more specific than an entire file?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 35}
+      ]
+    },
+    {
+      "query": "Will references to a precise block remain portable to other Markdown tools?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Internal Links Documentation.md", "line": 36}
+      ]
+    },
+    {
+      "query": "How can a note carry machine-readable fields?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 32}
+      ]
+    },
+    {
+      "query": "What kinds of values can note fields contain?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 33}
+      ]
+    },
+    {
+      "query": "Can a reusable note skeleton contribute metadata without replacing what is there?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 34}
+      ]
+    },
+    {
+      "query": "What property operations and shapes are not fully supported?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Obsidian Properties Documentation.md", "line": 36}
       ]
     }
   ]
