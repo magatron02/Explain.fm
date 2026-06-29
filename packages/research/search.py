@@ -8,6 +8,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 DEFAULT_SOURCE_DIR = Path("knowledge/obsidian/sources")
+STOPWORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how", "in", "into",
+    "is", "it", "of", "on", "or", "that", "the", "this", "to", "what", "where", "which", "who",
+    "why", "with",
+}
 
 
 @dataclass(frozen=True)
@@ -19,7 +24,7 @@ class SearchHit:
 
 
 def _tokens(text: str) -> list[str]:
-    return re.findall(r"[a-z0-9][a-z0-9_-]+", text.lower())
+    return [token for token in re.findall(r"[a-z0-9][a-z0-9_-]+", text.lower()) if token not in STOPWORDS]
 
 
 def _accepted_body_start(lines: list[str]) -> int | None:

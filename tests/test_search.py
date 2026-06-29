@@ -40,6 +40,16 @@ class SearchTests(unittest.TestCase):
 
             self.assertEqual(search_sources("provenance", root), [])
 
+    def test_stopwords_do_not_create_false_hits(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "source.md").write_text(
+                "---\nstatus: accepted\n---\nThe source is available.\n",
+                encoding="utf-8",
+            )
+
+            self.assertEqual(search_sources("what is the", root), [])
+
 
 if __name__ == "__main__":
     unittest.main()

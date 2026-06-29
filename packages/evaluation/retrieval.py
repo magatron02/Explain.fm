@@ -55,8 +55,9 @@ def main(argv: list[str]) -> int:
 
     for failure in result.failures:
         print(f"FAIL {failure}")
-    print(f"retrieval cases: {result.passed}/{result.total} passed")
-    return 0 if result.passed == result.total and result.total else 1
+    expected_passed = int(benchmark.get("expected_passed", result.total))
+    print(f"retrieval cases: {result.passed}/{result.total} passed (expected {expected_passed})")
+    return 0 if result.total and result.passed == expected_passed else 1
 
 
 if __name__ == "__main__":

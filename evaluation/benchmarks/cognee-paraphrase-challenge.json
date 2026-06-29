@@ -1,0 +1,31 @@
+{
+  "name": "cognee-paraphrase-challenge-v1",
+  "limit": 5,
+  "expected_passed": 0,
+  "cases": [
+    {
+      "query": "Which component keeps track of where information came from?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 33}
+      ]
+    },
+    {
+      "query": "How does the system find conceptually similar material?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 34}
+      ]
+    },
+    {
+      "query": "How are connected ideas represented?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 35}
+      ]
+    },
+    {
+      "query": "What actions make up the normal memory lifecycle?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 36}
+      ]
+    }
+  ]
+}

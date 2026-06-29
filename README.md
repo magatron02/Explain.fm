@@ -34,6 +34,7 @@ Run the retrieval citation benchmark:
 
 ```bash
 python packages/evaluation/retrieval.py
+python packages/evaluation/retrieval.py evaluation/benchmarks/cognee-paraphrase-challenge.json
 ```
 
 ## License
