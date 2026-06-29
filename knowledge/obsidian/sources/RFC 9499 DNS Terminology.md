@@ -9,7 +9,7 @@ publisher: "RFC Editor"
 published: "2024-03"
 accessed: "2026-06-29"
 authority: "Primary standards terminology; BCP 219"
-license: "IETF Trust Legal Provisions and RFC publication notice"
+license: "IETF Trust Legal Provisions 5.0 and RFC publication notice"
 usage_rights: "Cite and paraphrase factual definitions; do not reproduce the full RFC"
 topics: [DNS, resolution, caching]
 tags: [source, standard, dns]

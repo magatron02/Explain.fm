@@ -9,7 +9,7 @@ publisher: "RFC Editor"
 published: "1987-11"
 accessed: "2026-06-29"
 authority: "Foundational DNS wire-format specification; STD 13 component"
-license: "IETF Trust Legal Provisions and RFC publication notice"
+license: "RFC publication copyright terms in effect in 1987; legacy rights administered by the IETF Trust"
 usage_rights: "Cite and paraphrase factual content; do not reproduce the full RFC"
 topics: [DNS, messages, transport]
 tags: [source, standard, dns]
