@@ -37,6 +37,12 @@ python packages/evaluation/retrieval.py
 python packages/evaluation/retrieval.py evaluation/benchmarks/cognee-paraphrase-challenge.json
 ```
 
+Run the complete local quality gate:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
 ## License
 
 This repository is available under the existing [MIT License](LICENSE).
