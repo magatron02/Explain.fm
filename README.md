@@ -24,6 +24,16 @@ Search accepted sources with line-level provenance:
 python packages/research/search.py "provenance graph"
 ```
 
+Search paraphrases through the local Ollama embedding route:
+
+```bash
+ollama pull nomic-embed-text
+python packages/research/semantic_search.py "Where is note metadata physically written?"
+python packages/evaluation/semantic_retrieval.py
+```
+
+The semantic benchmark is a local integration check and is not part of CI because it requires Ollama. Its recorded result is in [the local semantic baseline](evaluation/metrics/semantic-local-baseline.md).
+
 Build an evidence-only handoff for research:
 
 ```bash

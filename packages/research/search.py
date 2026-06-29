@@ -19,7 +19,7 @@ STOPWORDS = {
 class SearchHit:
     path: Path
     line: int
-    score: int
+    score: float
     snippet: str
 
 

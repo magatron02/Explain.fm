@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -22,14 +23,18 @@ class EvaluationResult:
     failures: tuple[str, ...]
 
 
-def evaluate(benchmark: dict, repo_root: Path) -> EvaluationResult:
+def evaluate(
+    benchmark: dict,
+    repo_root: Path,
+    search: Callable[[str, Path, int], list] = search_sources,
+) -> EvaluationResult:
     source_dir = repo_root / "knowledge" / "obsidian" / "sources"
     limit = int(benchmark.get("limit", 5))
     failures: list[str] = []
     cases = benchmark.get("cases", [])
 
     for case in cases:
-        hits = search_sources(case["query"], source_dir, limit)
+        hits = search(case["query"], source_dir, limit)
         actual = {(hit.path.resolve(), hit.line) for hit in hits}
         for expected in case.get("expected", []):
             target = ((repo_root / expected["path"]).resolve(), int(expected["line"]))
