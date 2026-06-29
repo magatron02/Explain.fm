@@ -18,6 +18,12 @@ Validate a populated source note with:
 python packages/core/source_note.py knowledge/obsidian/inbox/example.md
 ```
 
+Search accepted sources with line-level provenance:
+
+```bash
+python packages/research/search.py "provenance graph"
+```
+
 ## License
 
 This repository is available under the existing [MIT License](LICENSE).
