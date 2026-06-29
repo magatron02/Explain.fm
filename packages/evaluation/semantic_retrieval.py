@@ -35,6 +35,7 @@ def main(argv: list[str]) -> int:
     for failure in result.failures:
         print(f"FAIL {failure}")
     print(f"semantic retrieval cases: {result.passed}/{result.total} passed")
+    print(f"top-1: {result.top1}/{result.total}; MRR: {result.mrr:.3f}")
     return 0 if result.total and result.passed == result.total else 1
 
 

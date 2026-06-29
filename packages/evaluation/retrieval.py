@@ -20,6 +20,8 @@ DEFAULT_BENCHMARK = Path("evaluation/benchmarks/cognee-retrieval.json")
 class EvaluationResult:
     passed: int
     total: int
+    top1: int
+    mrr: float
     failures: tuple[str, ...]
 
 
@@ -32,10 +34,20 @@ def evaluate(
     limit = int(benchmark.get("limit", 5))
     failures: list[str] = []
     cases = benchmark.get("cases", [])
+    top1 = 0
+    reciprocal_rank = 0.0
 
     for case in cases:
         hits = search(case["query"], source_dir, limit)
-        actual = {(hit.path.resolve(), hit.line) for hit in hits}
+        actual = [(hit.path.resolve(), hit.line) for hit in hits]
+        expected_targets = {
+            ((repo_root / expected["path"]).resolve(), int(expected["line"]))
+            for expected in case.get("expected", [])
+        }
+        ranks = [rank for rank, target in enumerate(actual, start=1) if target in expected_targets]
+        if ranks:
+            top1 += min(ranks) == 1
+            reciprocal_rank += 1 / min(ranks)
         for expected in case.get("expected", []):
             target = ((repo_root / expected["path"]).resolve(), int(expected["line"]))
             if target not in actual:
@@ -43,7 +55,13 @@ def evaluate(
 
     total = len(cases)
     failed_cases = {failure.split(": missing ", 1)[0] for failure in failures}
-    return EvaluationResult(passed=total - len(failed_cases), total=total, failures=tuple(failures))
+    return EvaluationResult(
+        passed=total - len(failed_cases),
+        total=total,
+        top1=top1,
+        mrr=reciprocal_rank / total if total else 0.0,
+        failures=tuple(failures),
+    )
 
 
 def main(argv: list[str]) -> int:
@@ -62,6 +80,7 @@ def main(argv: list[str]) -> int:
         print(f"FAIL {failure}")
     expected_passed = int(benchmark.get("expected_passed", result.total))
     print(f"retrieval cases: {result.passed}/{result.total} passed (expected {expected_passed})")
+    print(f"top-1: {result.top1}/{result.total}; MRR: {result.mrr:.3f}")
     return 0 if result.total and result.passed == expected_passed else 1
 
 
