@@ -8,9 +8,15 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-This repository currently contains the product, engineering, agent, quality, and architecture foundations. Application code and technology choices intentionally remain unimplemented.
+Era 1 implementation has started with a dependency-free validator for Obsidian source notes. Broader application and infrastructure choices remain intentionally deferred until the knowledge slice proves them necessary.
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
+
+Validate a populated source note with:
+
+```bash
+python packages/core/source_note.py knowledge/obsidian/inbox/example.md
+```
 
 ## License
 

@@ -1,2 +1,6 @@
 # Obsidian stores local UI state and machine-specific vault preferences here.
 .obsidian/
+
+# Python prototype artifacts
+__pycache__/
+*.py[cod]
