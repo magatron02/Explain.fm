@@ -47,6 +47,14 @@ class SourceNoteValidationTests(unittest.TestCase):
         errors = validate_source_note(source_note(accessed="{{date:YYYY-MM-DD}}"))
         self.assertIn("accessed is required", errors)
 
+    def test_impossible_date_fails(self):
+        errors = validate_source_note(source_note(accessed="2026-02-30"))
+        self.assertIn("accessed must be a real date in YYYY-MM-DD format", errors)
+
+    def test_source_url_requires_supported_scheme(self):
+        note = source_note().replace("https://example.com/source", "example.com/source")
+        self.assertIn("source_url must use https, http, or file", validate_source_note(note))
+
     def test_accepted_note_requires_completed_review(self):
         errors = validate_source_note(source_note(status="accepted"))
         self.assertEqual(len([error for error in errors if "incomplete review" in error]), len(REVIEW_ITEMS))

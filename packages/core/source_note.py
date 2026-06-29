@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import re
 import sys
+from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 ALLOWED_STATUSES = {"inbox", "reviewed", "accepted", "rejected"}
 REQUIRED_FIELDS = (
@@ -88,8 +90,15 @@ def validate_source_note(text: str) -> list[str]:
             errors.append(f"{field} is required")
 
     accessed = metadata.get("accessed", "")
-    if accessed and "{{" not in accessed and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", accessed):
-        errors.append("accessed must use YYYY-MM-DD")
+    if accessed and "{{" not in accessed:
+        try:
+            date.fromisoformat(accessed)
+        except ValueError:
+            errors.append("accessed must be a real date in YYYY-MM-DD format")
+
+    source_url = metadata.get("source_url", "")
+    if source_url and urlparse(source_url).scheme not in {"https", "http", "file"}:
+        errors.append("source_url must use https, http, or file")
 
     for heading in REQUIRED_HEADINGS:
         if heading not in text:
