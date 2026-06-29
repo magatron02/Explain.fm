@@ -24,6 +24,12 @@ Search accepted sources with line-level provenance:
 python packages/research/search.py "provenance graph"
 ```
 
+Validate a research brief and every cited source line:
+
+```bash
+python packages/research/brief.py docs/research/cognee-evaluation-brief.md
+```
+
 ## License
 
 This repository is available under the existing [MIT License](LICENSE).
