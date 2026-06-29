@@ -60,6 +60,17 @@ class SearchTests(unittest.TestCase):
 
             self.assertEqual(search_sources("provenance", root), [])
 
+    def test_unicode_words_are_searchable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "source.md").write_text(
+                "---\nstatus: accepted\n---\nกราฟ เชื่อมโยง แนวคิด\n",
+                encoding="utf-8",
+            )
+
+            hits = search_sources("เชื่อมโยง แนวคิด", root)
+            self.assertEqual((len(hits), hits[0].line), (1, 4))
+
 
 if __name__ == "__main__":
     unittest.main()

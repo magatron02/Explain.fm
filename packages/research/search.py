@@ -24,7 +24,8 @@ class SearchHit:
 
 
 def _tokens(text: str) -> list[str]:
-    return [token for token in re.findall(r"[a-z0-9][a-z0-9_-]+", text.lower()) if token not in STOPWORDS]
+    words = re.findall(r"[^\W_]+(?:[-_][^\W_]+)*", text.lower(), re.UNICODE)
+    return [token for token in words if token not in STOPWORDS]
 
 
 def _accepted_body_start(lines: list[str]) -> int | None:
