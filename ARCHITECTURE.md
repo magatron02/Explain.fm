@@ -2,21 +2,21 @@
 
 ## Conceptual pipeline
 
-`Sources → Collection → Cleaning → Obsidian Vault → Cognee Memory / Knowledge Graph → Research Agent → Story Planner → Script Generator → VoxCPM Voice → Audio Episode → Evaluation`
+`Knowledge Sources → Collection → Cleaning → Obsidian Vault → Cognee Knowledge Graph → Research Agent → Story Planner → Script Generator → Voice (VoxCPM) → Evaluation → Podcast Episode`
 
 ## Stage boundaries
 
-- **Sources:** trusted origin material with provenance and usage constraints.
+- **Knowledge Sources:** trusted origin material with provenance and usage constraints.
 - **Collection:** acquisition without interpretation or loss of provenance.
 - **Cleaning:** removal of noise while preserving meaning and traceability.
 - **Obsidian Vault:** human-readable curated knowledge workspace.
-- **Cognee Memory / Knowledge Graph:** concepts, relationships, and recall across material.
+- **Cognee Knowledge Graph:** concepts, relationships, and recall across material.
 - **Research Agent:** evidence-grounded synthesis with explicit uncertainty.
 - **Story Planner:** explanatory arc, teaching sequence, and episode intent.
 - **Script Generator:** natural conversation grounded in the approved plan and evidence.
-- **VoxCPM Voice:** speech rendering without changing factual meaning.
-- **Audio Episode:** packaged listener experience with source attribution.
-- **Evaluation:** quality evidence and feedback for every upstream stage.
+- **Voice (VoxCPM):** speech rendering without changing factual meaning.
+- **Evaluation:** quality gate and feedback for every upstream stage before publication.
+- **Podcast Episode:** packaged listener experience with source attribution after evaluation passes.
 
 Each stage must expose its inputs and outputs rather than absorbing neighboring responsibilities. Retrieval, reasoning, storytelling, voice, and evaluation remain separable so they can be tested independently.
 

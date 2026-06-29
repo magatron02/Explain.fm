@@ -4,13 +4,21 @@
 
 Define consistent quality assessment across pipeline artifacts and completed episodes.
 
-## Accepts
+## Inputs
 
 An identified artifact, its provenance and upstream references, a versioned rubric, and reviewer or evaluator context.
 
-## Produces
+## Outputs
 
 A report with criterion-level scores or judgments, supporting observations, critical failures, pass state, rubric version, and actionable remediation targets.
+
+## Dependencies
+
+Versioned quality rubrics, inspectable pipeline artifacts, provenance records, benchmark expectations, and qualified reviewer or evaluator context.
+
+## Success criteria
+
+The report is reproducible enough to audit, identifies every critical failure, gates accuracy and source quality independently, and routes actionable findings to the responsible stage.
 
 ## Invariants
 

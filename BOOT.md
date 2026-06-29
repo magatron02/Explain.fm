@@ -10,3 +10,5 @@ Before proposing or changing work, AI agents must read these documents in order:
 6. [AGENTS.md](AGENTS.md) — follow the repository operating model.
 
 Then read the contract, blueprint, standard, or playbook relevant to the task. Do not treat ideas in `VISION_ROADMAP.md` or `PARKING_LOT.md` as approved work.
+
+No coding may begin before this sequence is complete and the active roadmap boundary is understood.

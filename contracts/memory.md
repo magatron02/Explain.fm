@@ -4,13 +4,21 @@
 
 Define how approved knowledge and listener context enter and leave memory.
 
-## Accepts
+## Inputs
 
 Concepts, relationships, insights, mental models, listener preferences, episode history, or feedback that complies with `MEMORY_POLICY.md` and includes provenance.
 
-## Produces
+## Outputs
 
 Stored-item references or retrieved context with type, provenance, confidence, scope, version, and listener boundary where applicable.
+
+## Dependencies
+
+Memory policy, provenance metadata, identity boundaries, authorization context, and lifecycle controls.
+
+## Success criteria
+
+Stored knowledge is relevant and auditable; retrieval returns bounded context with correct provenance; listener data remains isolated, inspectable, and removable.
 
 ## Invariants
 

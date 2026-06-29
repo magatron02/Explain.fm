@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-The repository is in Era 0 — Foundation. Current work establishes intent, contracts, evaluation criteria, and operating discipline. It does not include a working application.
+The repository foundation for Era 0 is complete and ready for review. The next implementation phase is Era 1 — Knowledge. No working application or business logic exists yet.

@@ -19,5 +19,6 @@ Memory exists to improve continuity, connections, and future explanations.
 - Duplicated text
 - Navigation menus
 - Irrelevant metadata
+- Other extraction noise with no explanatory value
 
 Every stored item should retain provenance, scope, and confidence where relevant. Memory must not convert uncertain inference into fact. Corrected or superseded knowledge must remain auditable, and listener memory must be isolated and removable.

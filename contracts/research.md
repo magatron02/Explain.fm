@@ -4,13 +4,21 @@
 
 Define the boundary between knowledge retrieval and downstream story planning.
 
-## Accepts
+## Inputs
 
 A bounded topic, audience context, approved source set or discovery constraints, and relevant attributable memory.
 
-## Produces
+## Outputs
 
 A research brief containing scope, key concepts, material claims, claim-level evidence references, source assessments, disagreements, uncertainty, and open questions.
+
+## Dependencies
+
+Trusted source access, cleaned source material, provenance metadata, the research guide, and relevant attributable memory.
+
+## Success criteria
+
+The brief is complete for its declared scope, every material claim is supported, source limitations are visible, and a story planner can use it without repeating source discovery.
 
 ## Invariants
 
