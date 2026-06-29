@@ -1,0 +1,67 @@
+{
+  "name": "dns-paraphrase-challenge-v1",
+  "limit": 5,
+  "expected_passed": 5,
+  "cases": [
+    {
+      "query": "Who keeps asking until it gets the complete result?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 34}
+      ]
+    },
+    {
+      "query": "Which server can answer from data it already owns?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 35}
+      ]
+    },
+    {
+      "query": "Why can a repeat visit avoid contacting the owner again?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1034 Domain Names Concepts and Facilities.md", "line": 37}
+      ]
+    },
+    {
+      "query": "What decides when remembered lookup data becomes stale?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 36}
+      ]
+    },
+    {
+      "query": "How are names arranged from a host toward the top?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1034 Domain Names Concepts and Facilities.md", "line": 35}
+      ]
+    },
+    {
+      "query": "What information is carried in the question being asked?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 33}
+      ]
+    },
+    {
+      "query": "Which record types can hold IPv4 or IPv6 destinations?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 37}
+      ]
+    },
+    {
+      "query": "What are the major parts surrounding a DNS response?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 32}
+      ]
+    },
+    {
+      "query": "Which network transports share the standard DNS service number?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 35}
+      ]
+    },
+    {
+      "query": "What broad steps does a resolver follow before returning an answer?",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1034 Domain Names Concepts and Facilities.md", "line": 36}
+      ]
+    }
+  ]
+}

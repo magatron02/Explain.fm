@@ -34,6 +34,7 @@ Validate a research brief and every cited source line:
 
 ```bash
 python packages/research/brief.py docs/research/cognee-evaluation-brief.md
+python packages/research/brief.py docs/research/dns-resolution-brief.md
 ```
 
 Run the retrieval citation benchmark:

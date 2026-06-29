@@ -1,0 +1,72 @@
+{
+  "name": "dns-retrieval-v1",
+  "limit": 5,
+  "cases": [
+    {
+      "query": "DNS query-response request response messages format",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 32}
+      ]
+    },
+    {
+      "query": "resolver queries name type class responses",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 33}
+      ]
+    },
+    {
+      "query": "recursive local cache queries other servers final answer",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 34}
+      ]
+    },
+    {
+      "query": "authoritative local knowledge DNS zone",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 35}
+      ]
+    },
+    {
+      "query": "TTL cached data information source consulted",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 36}
+      ]
+    },
+    {
+      "query": "address records A AAAA",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 9499 DNS Terminology.md", "line": 37}
+      ]
+    },
+    {
+      "query": "recursive iterative resolution referral client",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1034 Domain Names Concepts and Facilities.md", "line": 32}
+      ]
+    },
+    {
+      "query": "domain name space tree labels root",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1034 Domain Names Concepts and Facilities.md", "line": 35}
+      ]
+    },
+    {
+      "query": "question answer authority additional sections",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 32}
+      ]
+    },
+    {
+      "query": "UDP TCP port 53",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 35}
+      ]
+    },
+    {
+      "query": "A record 32-bit Internet address",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and Specification.md", "line": 36}
+      ]
+    }
+  ]
+}
