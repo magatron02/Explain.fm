@@ -1,0 +1,37 @@
+{
+  "name": "cognee-retrieval-v1",
+  "limit": 5,
+  "cases": [
+    {
+      "query": "relational provenance",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 33}
+      ]
+    },
+    {
+      "query": "vector embeddings semantic similarity",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 34}
+      ]
+    },
+    {
+      "query": "graph entities relationships",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 35}
+      ]
+    },
+    {
+      "query": "remember recall improve forget",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Core Concepts Documentation.md", "line": 36},
+        {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 33}
+      ]
+    },
+    {
+      "query": "Apache license",
+      "expected": [
+        {"path": "knowledge/obsidian/sources/Cognee Official Repository.md", "line": 35}
+      ]
+    }
+  ]
+}

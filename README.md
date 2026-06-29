@@ -30,6 +30,12 @@ Validate a research brief and every cited source line:
 python packages/research/brief.py docs/research/cognee-evaluation-brief.md
 ```
 
+Run the retrieval citation benchmark:
+
+```bash
+python packages/evaluation/retrieval.py
+```
+
 ## License
 
 This repository is available under the existing [MIT License](LICENSE).
