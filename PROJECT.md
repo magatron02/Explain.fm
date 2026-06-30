@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 2 — Story is active. The DNS research brief, story plan, script, and complete VoxCPM2 audio prototype pass their automated gates. Era 2 remains open until the 5-minute episode passes human listening review.
+Era 3 — Memory is active. Era 2 passed with a grounded DNS plan, script, complete audio prototype, automated checks, and Founder listening approval. The current task boundary is to prove that attributable memory improves continuity or explanation quality without storing source noise or adopting an unmeasured dependency.

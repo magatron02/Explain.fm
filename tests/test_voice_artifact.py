@@ -32,6 +32,14 @@ class VoiceArtifactTests(unittest.TestCase):
             path.write_text(json.dumps(manifest), encoding="utf-8")
             self.assertIn("turn 0 has an undeclared text transformation", validate_audio_manifest(path, ROOT, False))
 
+    def test_passed_audio_requires_human_review(self):
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        manifest.pop("human_review")
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "manifest.json"
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertIn("passed audio requires a dated human Pass review", validate_audio_manifest(path, ROOT, False))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -20,7 +20,7 @@ Prove that trusted sources can be collected, cleaned, traced, and retrieved with
 
 ## Era 2 — Story
 
-**Status:** Active. The complete DNS audio prototype passes automated checks; human listening review remains open.
+**Status:** Complete as of 2026-06-30. See `evaluation/metrics/era-2-exit-review.md`.
 
 Prove that grounded research can become a coherent, natural, memorable episode script and audio prototype.
 
@@ -28,7 +28,7 @@ Prove that grounded research can become a coherent, natural, memorable episode s
 
 ## Era 3 — Memory
 
-**Status:** Future.
+**Status:** Active. The DNS episode is the baseline; no memory dependency is approved.
 
 Connect concepts, relationships, insights, and episode history without accumulating noisy source artifacts.
 

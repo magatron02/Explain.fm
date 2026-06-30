@@ -5,7 +5,7 @@
 - Manifest: `evaluation/golden-episodes/dns-resolution-v1.manifest.json`
 - Script: `evaluation/golden-episodes/dns-resolution-script.md`
 - Rubric: `evaluation/rubrics/audio-v1.md`
-- Status: Automated gates passed; listening gates pending
+- Status: Passed; automated and human listening gates complete
 
 ## Automated result
 
@@ -30,4 +30,4 @@ The same Space's `FunAudioLLM/SenseVoiceSmall` route was used as an intelligibil
 
 ## Listening gate
 
-The artifact is open in Audacity for human review. Do not mark Era 2 complete until a listener confirms intelligibility, meaning preservation, speaker distinction, pronunciation, naturalness, and complete-episode listenability.
+The Founder returned an unqualified `Pass` after complete-episode playback on 2026-06-30. No timestamped defects were reported. See `evaluation/metrics/era-2-exit-review.md`.

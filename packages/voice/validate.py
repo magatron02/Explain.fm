@@ -29,6 +29,13 @@ def _sha256(path: Path) -> str:
 def validate_audio_manifest(manifest_path: Path, repo_root: Path = REPO_ROOT, probe_audio: bool = True) -> list[str]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     errors: list[str] = []
+    status = manifest.get("status")
+    if status not in {"automated_gates_passed_listening_pending", "passed", "revise", "blocked"}:
+        errors.append("unknown audio status")
+    if status == "passed":
+        review = manifest.get("human_review", {})
+        if review.get("decision") != "Pass" or not review.get("reviewer") or not review.get("date"):
+            errors.append("passed audio requires a dated human Pass review")
     artifact = _inside(repo_root, manifest.get("artifact", ""), "evaluation/golden-episodes")
     script = _inside(repo_root, manifest.get("script", ""), "evaluation/golden-episodes")
     if artifact is None:

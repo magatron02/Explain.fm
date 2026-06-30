@@ -1,5 +1,13 @@
 {
-  "status": "automated_gates_passed_listening_pending",
+  "status": "passed",
+  "human_review": {
+    "reviewer": "Founder",
+    "date": "2026-06-30",
+    "decision": "Pass",
+    "source": "Direct user response after complete-episode playback",
+    "rubric": "evaluation/rubrics/audio-v1.md",
+    "defects_reported": []
+  },
   "artifact": "evaluation/golden-episodes/dns-resolution-v1.mp3",
   "artifact_sha256": "4b46b5beebffc288811e618f1716bc2a2a940db2f831d36d6fe5201fb5267fde",
   "script": "evaluation/golden-episodes/dns-resolution-script.md",

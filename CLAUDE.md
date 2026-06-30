@@ -12,4 +12,4 @@ Read `BOOT.md`, then follow `AGENTS.md` before changing the repository.
 
 ## Current boundary
 
-Era 2 — Story is active. The DNS audio prototype and manifest pass automated checks; see `evaluation/metrics/dns-audio-automated-review.md`. Human listening review remains required, and no production voice dependency is approved.
+Era 3 — Memory is active. Use the passed DNS episode and `evaluation/metrics/era-2-exit-review.md` as the baseline. Store only attributable concepts, relationships, insights, mental models, episode history, or approved listener context. No production memory dependency is approved; the earlier Cognee candidate remains rejected.

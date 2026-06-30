@@ -8,7 +8,7 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-Era 2 — Story is active. Era 1 passed its bounded knowledge exit review without adopting a retrieval dependency; the reviewed DNS slice is the first grounded story input. Broader application and infrastructure choices remain deferred until a tested slice proves them necessary.
+Era 3 — Memory is active. Era 2 passed with the grounded DNS episode, automated artifact checks, and Founder listening approval. No production memory dependency is approved; the next slice must prove measurable continuity or explanation improvement.
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
 
