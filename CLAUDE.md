@@ -12,4 +12,4 @@ Read `BOOT.md`, then follow `AGENTS.md` before changing the repository.
 
 ## Current boundary
 
-Era 1 — Knowledge is active. No production retrieval or memory dependency is approved; RFC 0001 rejected the current Cognee candidate. Preserve exact source provenance and run the repository tests before handoff.
+Era 2 — Story is active. Start from `docs/research/dns-resolution-brief.md`; preserve every evidence boundary through planning and scripting. No production retrieval, memory, or voice dependency is approved. Do not reopen rejected retrieval candidates, reranking, or open-domain retrieval without new measured evidence.

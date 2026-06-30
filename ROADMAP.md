@@ -4,11 +4,15 @@ Only work in the current era is active. Moving to the next era requires evidence
 
 ## Era 0 — Foundation
 
+**Status:** Complete.
+
 Define product intent, principles, architecture boundaries, contracts, evaluation criteria, and working practices.
 
 **Exit:** the repository can guide a scoped technical prototype without unresolved foundational contradictions.
 
 ## Era 1 — Knowledge
+
+**Status:** Complete as of 2026-06-30. See `evaluation/metrics/era-1-exit-review.md`.
 
 Prove that trusted sources can be collected, cleaned, traced, and retrieved with source fidelity.
 
@@ -16,11 +20,15 @@ Prove that trusted sources can be collected, cleaned, traced, and retrieved with
 
 ## Era 2 — Story
 
+**Status:** Active. The first bounded slice is the reviewed DNS research brief.
+
 Prove that grounded research can become a coherent, natural, memorable episode script and audio prototype.
 
 **Exit:** golden episodes meet the first quality rubric.
 
 ## Era 3 — Memory
+
+**Status:** Future.
 
 Connect concepts, relationships, insights, and episode history without accumulating noisy source artifacts.
 
@@ -28,11 +36,15 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personalization
 
+**Status:** Future.
+
 Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
 
 **Exit:** personalization improves learning outcomes without narrowing accuracy or perspective.
 
 ## Era 5 — Ecosystem
+
+**Status:** Future.
 
 Enable durable publishing, contribution, integration, and governance around trusted knowledge storytelling.
 

@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 1 — Knowledge is active. The repository contains a small accepted Obsidian corpus, source and citation validators, transparent lexical retrieval, retrieval benchmarks, and reviewed research output. Natural-language paraphrase retrieval remains below the reliability needed to exit Era 1, and no production retrieval dependency has been selected.
+Era 2 — Story is active. Era 1 passed its bounded-workflow exit review with a reviewed DNS topic, complete accepted-claim evidence packing, claim-level citations, and reviewed research output. Direct natural-language retrieval remains unapproved; no production retrieval or memory dependency has been selected. The first Era 2 slice turns the DNS research brief into an evaluated story plan, script, and audio prototype.

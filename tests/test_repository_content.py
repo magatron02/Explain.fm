@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 
 from brief import validate_research_brief
 from packages.evaluation.retrieval import evaluate
+from packages.research.evidence_pack import build_topic_evidence_pack
 from source_note import validate_source_note
 from wiki_links import validate_knowledge_index, validate_knowledge_links
 
@@ -54,6 +55,15 @@ class RepositoryContentTests(unittest.TestCase):
                 result = evaluate(benchmark, ROOT)
                 expected = int(benchmark.get("expected_passed", result.total))
                 self.assertEqual(result.passed, expected, result.failures)
+
+    def test_dns_topic_pack_covers_every_paraphrase_target(self):
+        benchmark = json.loads(
+            (ROOT / "evaluation" / "benchmarks" / "dns-paraphrase-challenge.json").read_text(encoding="utf-8")
+        )
+        pack = build_topic_evidence_pack("DNS Resolution", ROOT)
+        for case in benchmark["cases"]:
+            for expected in case["expected"]:
+                self.assertIn(f'`{expected["path"]}:{expected["line"]}`', pack, case["query"])
 
 
 if __name__ == "__main__":

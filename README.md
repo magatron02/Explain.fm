@@ -8,7 +8,7 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-Era 1 implementation has started with a dependency-free validator for Obsidian source notes. Broader application and infrastructure choices remain intentionally deferred until the knowledge slice proves them necessary.
+Era 2 — Story is active. Era 1 passed its bounded knowledge exit review without adopting a retrieval dependency; the reviewed DNS slice is the first grounded story input. Broader application and infrastructure choices remain deferred until a tested slice proves them necessary.
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
 
@@ -28,6 +28,7 @@ Build an evidence-only handoff for research:
 
 ```bash
 python packages/research/evidence_pack.py "How does Cognee preserve provenance?"
+python packages/research/evidence_pack.py --topic "DNS Resolution"
 ```
 
 Validate a research brief and every cited source line:
