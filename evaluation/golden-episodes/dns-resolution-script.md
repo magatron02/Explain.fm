@@ -67,7 +67,7 @@ Evidence: `knowledge/obsidian/sources/RFC 1035 Domain Names Implementation and S
 
 **MAYA:** Imagine asking for an address record for a made-up service name. On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.
 
-**NARIN:** And address answers use A or AAAA records.
+**NARIN:** And address answers use A, or quad-A, records.
 
 **MAYA:** Correct. Now ask again while the cached record is still reusable. The resolver may answer from that cache before consulting an authoritative server again.
 

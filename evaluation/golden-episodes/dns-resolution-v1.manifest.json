@@ -1,10 +1,11 @@
 {
   "status": "automated_gates_passed_listening_pending",
   "artifact": "evaluation/golden-episodes/dns-resolution-v1.mp3",
-  "artifact_sha256": "e836c0aa9c6c7183ea080ea656270335f28fa98bea5b5ea238671bd953834fc6",
+  "artifact_sha256": "4b46b5beebffc288811e618f1716bc2a2a940db2f831d36d6fe5201fb5267fde",
   "script": "evaluation/golden-episodes/dns-resolution-script.md",
-  "script_sha256": "e2f06453f49bddef710972979a76d7396dcb762dd04bafeb2564642ed1b98e6e",
-  "script_commit": "f76974237c75a3243f81d391f66b244c6799c658",
+  "script_sha256": "bff56b2a5c053ec88f4794aad16b02de3cec83cb37023b312aa04d15f73e6144",
+  "script_commit": null,
+  "script_version_note": "The script and audio are committed together; script_sha256 is authoritative.",
   "renderer": {
     "provider": "OpenBMB official VoxCPM-Demo Hugging Face Space",
     "space": "openbmb/VoxCPM-Demo",
@@ -43,8 +44,8 @@
   "automated_results": {
     "turns_expected": 40,
     "turns_rendered": 40,
-    "duration_seconds": 303.974,
-    "size_bytes": 7296941,
+    "duration_seconds": 305.246,
+    "size_bytes": 7327469,
     "bit_rate": 192041,
     "codec": "mp3",
     "sample_rate_hz": 48000,
@@ -53,6 +54,16 @@
     "loudness_range_lu": 2.8,
     "max_volume_db": -2.2
   },
+  "asr_diagnostic": {
+    "provider": "OpenBMB VoxCPM-Demo Space",
+    "api": "/_run_asr_if_needed",
+    "model": "FunAudioLLM/SenseVoiceSmall",
+    "aggregate_edits": 18,
+    "reference_words": 719,
+    "wer": 0.025,
+    "exact_turns": 28,
+    "note": "Diagnostic only; no acceptance threshold was predeclared and ASR does not replace human listening."
+  },
   "turns": [
     {
       "index": 0,
@@ -60,7 +71,10 @@
       "speaker": "MAYA",
       "script_text": "You ask for a name online, and a moment later your device has somewhere to send the request. It feels like one quick lookup.",
       "render_text": "You ask for a name online, and a moment later your device has somewhere to send the request. It feels like one quick lookup.",
-      "duration_seconds": 8.184
+      "duration_seconds": 8.184,
+      "asr_transcript": "You ask for a name online. And a moment later, your device has somewhere to send the request. It feels like one quick look up.",
+      "asr_edits": 2,
+      "asr_wer": 0.0833
     },
     {
       "index": 1,
@@ -68,7 +82,10 @@
       "speaker": "NARIN",
       "script_text": "As if the internet keeps one enormous directory?",
       "render_text": "As if the internet keeps one enormous directory?",
-      "duration_seconds": 2.76
+      "duration_seconds": 2.76,
+      "asr_transcript": "As if the internet keeps one enormous directory.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 2,
@@ -76,7 +93,10 @@
       "speaker": "MAYA",
       "script_text": "Exactly. But the useful mental model is not one directory. It is a delegated conversation—and sometimes that conversation does not happen at all because an earlier answer can still be reused.",
       "render_text": "Exactly. But the useful mental model is not one directory. It is a delegated conversation—and sometimes that conversation does not happen at all because an earlier answer can still be reused.",
-      "duration_seconds": 13.152
+      "duration_seconds": 13.152,
+      "asr_transcript": "Exactly, but the useful mental model is not one directory, it is a delegated conversation, and sometimes that conversation does not happen at all because an earlier answer can still be reused.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 3,
@@ -84,7 +104,10 @@
       "speaker": "NARIN",
       "script_text": "So the tiny pause hides either a journey or a memory.",
       "render_text": "So the tiny pause hides either a journey or a memory.",
-      "duration_seconds": 4.824
+      "duration_seconds": 4.824,
+      "asr_transcript": "So the tiny pause hides either a journey or a memory.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 4,
@@ -92,7 +115,10 @@
       "speaker": "MAYA",
       "script_text": "That distinction explains two everyday mysteries: why a repeated lookup can avoid going back to the original source, and why the answer is never something a resolver should remember forever.",
       "render_text": "That distinction explains two everyday mysteries: why a repeated lookup can avoid going back to the original source, and why the answer is never something a resolver should remember forever.",
-      "duration_seconds": 12.672
+      "duration_seconds": 12.672,
+      "asr_transcript": "That distinction explains two everyday mysteries, why a repeated lookup can avoid going back to the original source, and why the answer is never something a resolver should remember forever.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 5,
@@ -100,7 +126,10 @@
       "speaker": "NARIN",
       "script_text": "The speed and the expiry come from the same design?",
       "render_text": "The speed and the expiry come from the same design?",
-      "duration_seconds": 3.864
+      "duration_seconds": 3.864,
+      "asr_transcript": "The speed and the expiry come from the same design.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 6,
@@ -108,7 +137,10 @@
       "speaker": "MAYA",
       "script_text": "Right. Reuse saves work. A time limit prevents that reused data from becoming permanent truth.",
       "render_text": "Right. Reuse saves work. A time limit prevents that reused data from becoming permanent truth.",
-      "duration_seconds": 6.12
+      "duration_seconds": 6.12,
+      "asr_transcript": "Right, reuse saves work; a time limit prevents that reuse data from becoming permanent truth.",
+      "asr_edits": 1,
+      "asr_wer": 0.0667
     },
     {
       "index": 7,
@@ -116,7 +148,10 @@
       "speaker": "NARIN",
       "script_text": "Let me try the simple version: my device asks DNS for a name, DNS returns an address, done.",
       "render_text": "Let me try the simple version: my device asks D N S for a name, D N S returns an address, done.",
-      "duration_seconds": 6.264
+      "duration_seconds": 6.264,
+      "asr_transcript": "Let me try the simple version My device asks DNS for a name DNS returns an address done.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 8,
@@ -124,7 +159,10 @@
       "speaker": "MAYA",
       "script_text": "That sentence collapses several jobs into one. A resolver asks questions for a client. In recursive mode, the server takes responsibility for obtaining a final answer. During iterative resolution, the next response may instead be a referral telling the resolver where to continue.",
       "render_text": "That sentence collapses several jobs into one. A resolver asks questions for a client. In recursive mode, the server takes responsibility for obtaining a final answer. During iterative resolution, the next response may instead be a referral telling the resolver where to continue.",
-      "duration_seconds": 16.344
+      "duration_seconds": 16.344,
+      "asr_transcript": "That sentence collapses several jobs into one; a resolver asks questions for a client in recursive mode, the server takes responsibility for obtaining a final answer During iterative resolution, the next response may instead be a referral telling the resolver where to continue.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 9,
@@ -132,7 +170,10 @@
       "speaker": "NARIN",
       "script_text": "And the authoritative server?",
       "render_text": "And the authoritative server?",
-      "duration_seconds": 1.632
+      "duration_seconds": 1.632,
+      "asr_transcript": "And the authoritative server.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 10,
@@ -140,7 +181,10 @@
       "speaker": "MAYA",
       "script_text": "Different job. It answers from local knowledge about the zone it serves. It is not the part wandering around asking other servers.",
       "render_text": "Different job. It answers from local knowledge about the zone it serves. It is not the part wandering around asking other servers.",
-      "duration_seconds": 8.352
+      "duration_seconds": 8.352,
+      "asr_transcript": "Different job. It answers from local knowledge about the zone it serves. It is not the part wandering around asking other servers.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 11,
@@ -148,7 +192,10 @@
       "speaker": "MAYA",
       "script_text": "Start with the question. It identifies a domain name, a query type, and a query class.",
       "render_text": "Start with the question. It identifies a domain name, a query type, and a query class.",
-      "duration_seconds": 5.952
+      "duration_seconds": 5.952,
+      "asr_transcript": "Start with the question, it identifies a domain name, a query type, and a query class.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 12,
@@ -156,7 +203,10 @@
       "speaker": "NARIN",
       "script_text": "So even the question is more precise than “where is this name?”",
       "render_text": "So even the question is more precise than “where is this name?”",
-      "duration_seconds": 4.344
+      "duration_seconds": 4.344,
+      "asr_transcript": "So even the question is more precise than where is this name?",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 13,
@@ -164,7 +214,10 @@
       "speaker": "MAYA",
       "script_text": "Yes. Then the resolver checks local information first. If it cannot answer there, it chooses servers, sends queries, and examines the responses.",
       "render_text": "Yes. Then the resolver checks local information first. If it cannot answer there, it chooses servers, sends queries, and examines the responses.",
-      "duration_seconds": 10.104
+      "duration_seconds": 10.104,
+      "asr_transcript": "Yes, then the resolver checks local information first, if it cannot answer there, it chooses servers, sends queries, and examines the responses.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 14,
@@ -172,7 +225,10 @@
       "speaker": "NARIN",
       "script_text": "Where does the hierarchy enter?",
       "render_text": "Where does the hierarchy enter?",
-      "duration_seconds": 1.632
+      "duration_seconds": 1.632,
+      "asr_transcript": "Where does the hierarchy enter?",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 15,
@@ -180,7 +236,10 @@
       "speaker": "MAYA",
       "script_text": "DNS names form a tree. Information is organized into zones, and referrals let the resolver continue through that structure until it reaches relevant authoritative knowledge.",
       "render_text": "D N S names form a tree. Information is organized into zones, and referrals let the resolver continue through that structure until it reaches relevant authoritative knowledge.",
-      "duration_seconds": 11.712
+      "duration_seconds": 11.712,
+      "asr_transcript": "DNS names form a tree. Information is organized into zones, and referrals let the resolver continue through that structure until it reaches relevant authoritative knowledge.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 16,
@@ -188,7 +247,10 @@
       "speaker": "NARIN",
       "script_text": "Then the answer travels back through the resolver to the client.",
       "render_text": "Then the answer travels back through the resolver to the client.",
-      "duration_seconds": 3.072
+      "duration_seconds": 3.072,
+      "asr_transcript": "Then the answer travels back through the resolver to the client.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 17,
@@ -196,7 +258,10 @@
       "speaker": "MAYA",
       "script_text": "And the response has structure. The base message format has a header followed by question, answer, authority, and additional sections. That matters, but it is supporting machinery. The core idea is still: check, ask, follow, and return.",
       "render_text": "And the response has structure. The base message format has a header followed by question, answer, authority, and additional sections. That matters, but it is supporting machinery. The core idea is still: check, ask, follow, and return.",
-      "duration_seconds": 17.16
+      "duration_seconds": 17.16,
+      "asr_transcript": "And the response has structure. The base message format has a header followed by question, answer, authority and additional sections that matters, but it is supporting machinery. The ca idea is still. check, ask, follow and return.",
+      "asr_edits": 1,
+      "asr_wer": 0.027
     },
     {
       "index": 18,
@@ -204,7 +269,10 @@
       "speaker": "NARIN",
       "script_text": "Give me a concrete run.",
       "render_text": "Give me a concrete run.",
-      "duration_seconds": 1.632
+      "duration_seconds": 1.632,
+      "asr_transcript": "Give me a concrete run.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 19,
@@ -212,15 +280,21 @@
       "speaker": "MAYA",
       "script_text": "Imagine asking for an address record for a made-up service name. On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.",
       "render_text": "Imagine asking for an address record for a made-up service name. On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.",
-      "duration_seconds": 14.592
+      "duration_seconds": 14.592,
+      "asr_transcript": "Imagine asking for an address record for a made up service name On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 20,
       "section": "Examples",
       "speaker": "NARIN",
-      "script_text": "And address answers use A or AAAA records.",
-      "render_text": "And address answers use A or quad A records.",
-      "duration_seconds": 3.072
+      "script_text": "And address answers use A, or quad-A, records.",
+      "render_text": "And address answers use A, or quad-A, records.",
+      "duration_seconds": 4.344,
+      "asr_transcript": "And address answers use A or Quad A records.",
+      "asr_edits": 0,
+      "asr_wer": 0
     },
     {
       "index": 21,
@@ -228,7 +302,10 @@
       "speaker": "MAYA",
       "script_text": "Correct. Now ask again while the cached record is still reusable. The resolver may answer from that cache before consulting an authoritative server again.",
       "render_text": "Correct. Now ask again while the cached record is still reusable. The resolver may answer from that cache before consulting an authoritative server again.",
-      "duration_seconds": 9.312
+      "duration_seconds": 9.312,
+      "asr_transcript": "Correct, now ask again while the cached record is still reusable, the resolver may answer from that cache before consulting an authoritative server again.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 22,
@@ -236,7 +313,10 @@
       "speaker": "NARIN",
       "script_text": "Same question, shorter journey.",
       "render_text": "Same question, shorter journey.",
-      "duration_seconds": 2.424
+      "duration_seconds": 2.424,
+      "asr_transcript": "Same question, shorter journey.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 23,
@@ -244,7 +324,10 @@
       "speaker": "MAYA",
       "script_text": "Or no external journey at all.",
       "render_text": "Or no external journey at all.",
-      "duration_seconds": 2.424
+      "duration_seconds": 2.424,
+      "asr_transcript": "Or no external journey at all.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 24,
@@ -252,7 +335,10 @@
       "speaker": "NARIN",
       "script_text": "I want the three roles in one clean comparison.",
       "render_text": "I want the three roles in one clean comparison.",
-      "duration_seconds": 2.76
+      "duration_seconds": 2.76,
+      "asr_transcript": "I want the three roles in one clean comparison.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 25,
@@ -260,7 +346,10 @@
       "speaker": "MAYA",
       "script_text": "Recursive means: “Take responsibility for bringing me a final answer.” Iterative means: “Here is a referral; continue the search there.” Authoritative means: “I can answer from local knowledge for the zone I serve.”",
       "render_text": "Recursive means: “Take responsibility for bringing me a final answer.” Iterative means: “Here is a referral; continue the search there.” Authoritative means: “I can answer from local knowledge for the zone I serve.”",
-      "duration_seconds": 13.464
+      "duration_seconds": 13.464,
+      "asr_transcript": "Recursive means take responsibility for bringing me a final answer. Iterative means here is a referral. Conue the search there. Authoritative means I can answer from local knowledge for the zone I serve.",
+      "asr_edits": 1,
+      "asr_wer": 0.0303
     },
     {
       "index": 26,
@@ -268,7 +357,10 @@
       "speaker": "NARIN",
       "script_text": "One accepts responsibility, one advances the route, and one holds the relevant local data.",
       "render_text": "One accepts responsibility, one advances the route, and one holds the relevant local data.",
-      "duration_seconds": 5.16
+      "duration_seconds": 5.16,
+      "asr_transcript": "One accepts responsibility, one advances the route, and one holds the relevant local data.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 27,
@@ -276,7 +368,10 @@
       "speaker": "MAYA",
       "script_text": "Exactly. Keeping those roles separate prevents the system from sounding like one mysterious DNS machine.",
       "render_text": "Exactly. Keeping those roles separate prevents the system from sounding like one mysterious D N S machine.",
-      "duration_seconds": 6.912
+      "duration_seconds": 6.912,
+      "asr_transcript": "Exactly, keeping those roles separate prevents the system from sounding like one mysterious DNS machine.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 28,
@@ -284,7 +379,10 @@
       "speaker": "NARIN",
       "script_text": "Mistake one: every lookup goes directly to an authoritative server.",
       "render_text": "Mistake one: every lookup goes directly to an authoritative server.",
-      "duration_seconds": 4.032
+      "duration_seconds": 4.032,
+      "asr_transcript": "Mistake1, every lookup goes directly to an authoritative server.",
+      "asr_edits": 2,
+      "asr_wer": 0.2
     },
     {
       "index": 29,
@@ -292,7 +390,10 @@
       "speaker": "MAYA",
       "script_text": "Cached data can answer first, so no.",
       "render_text": "Cached data can answer first, so no.",
-      "duration_seconds": 3.072
+      "duration_seconds": 3.072,
+      "asr_transcript": "Cash data can answer first, so no.",
+      "asr_edits": 1,
+      "asr_wer": 0.1429
     },
     {
       "index": 30,
@@ -300,7 +401,10 @@
       "speaker": "NARIN",
       "script_text": "Mistake two: an authoritative server searches other servers until it finds something.",
       "render_text": "Mistake two: an authoritative server searches other servers until it finds something.",
-      "duration_seconds": 5.952
+      "duration_seconds": 5.952,
+      "asr_transcript": "Mistake2, an authoritative server searches other servers until it finds something.",
+      "asr_edits": 2,
+      "asr_wer": 0.1667
     },
     {
       "index": 31,
@@ -308,7 +412,10 @@
       "speaker": "MAYA",
       "script_text": "Also no. Its defining role here is answering from local zone knowledge.",
       "render_text": "Also no. Its defining role here is answering from local zone knowledge.",
-      "duration_seconds": 5.16
+      "duration_seconds": 5.16,
+      "asr_transcript": "Also know, its defining role here is answering from local zone knowledge.",
+      "asr_edits": 1,
+      "asr_wer": 0.0833
     },
     {
       "index": 32,
@@ -316,7 +423,10 @@
       "speaker": "NARIN",
       "script_text": "Mistake three: if a record has not reached its TTL, the answer is guaranteed to be correct.",
       "render_text": "Mistake three: if a record has not reached its T T L, the answer is guaranteed to be correct.",
-      "duration_seconds": 6.264
+      "duration_seconds": 6.264,
+      "asr_transcript": "Mistake3, if a record has not reached its TTL, the answer is guaranteed to be correct.",
+      "asr_edits": 2,
+      "asr_wer": 0.1176
     },
     {
       "index": 33,
@@ -324,7 +434,10 @@
       "speaker": "MAYA",
       "script_text": "TTL says how long cached data may be reused before the information source should be consulted again. It is a reuse boundary, not a proof that the underlying claim is true.",
       "render_text": "T T L says how long cached data may be reused before the information source should be consulted again. It is a reuse boundary, not a proof that the underlying claim is true.",
-      "duration_seconds": 10.92
+      "duration_seconds": 10.92,
+      "asr_transcript": "TTL says how long cache data may be reused before the information source should be consulted again; it is a reuse boundary, not a proof that the underlying claim is true.",
+      "asr_edits": 1,
+      "asr_wer": 0.0323
     },
     {
       "index": 34,
@@ -332,7 +445,10 @@
       "speaker": "NARIN",
       "script_text": "And not every DNS question has to request an address, because the question carries a record type.",
       "render_text": "And not every D N S question has to request an address, because the question carries a record type.",
-      "duration_seconds": 5.472
+      "duration_seconds": 5.472,
+      "asr_transcript": "And not every DNS question has to request an address because the question carries a record type.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 35,
@@ -340,7 +456,10 @@
       "speaker": "MAYA",
       "script_text": "Good. An address lookup is one useful example, not the definition of every DNS exchange.",
       "render_text": "Good. An address lookup is one useful example, not the definition of every D N S exchange.",
-      "duration_seconds": 7.08
+      "duration_seconds": 7.08,
+      "asr_transcript": "Good, and address lookup is one useful example, not the definition of every DNS exchange.",
+      "asr_edits": 1,
+      "asr_wer": 0.0667
     },
     {
       "index": 36,
@@ -348,7 +467,10 @@
       "speaker": "MAYA",
       "script_text": "Five verbs. Ask: form a question with a name, type, and class. Check: inspect local information and cache. Follow: use referrals when the answer is not local. Answer: obtain relevant authoritative data. Reuse: keep cached data only within its TTL boundary.",
       "render_text": "Five verbs. Ask: form a question with a name, type, and class. Check: inspect local information and cache. Follow: use referrals when the answer is not local. Answer: obtain relevant authoritative data. Reuse: keep cached data only within its T T L boundary.",
-      "duration_seconds": 21.0
+      "duration_seconds": 21.0,
+      "asr_transcript": "5ive verbs ask, form a question with a name, type and class check, In local information and cache, follow, Use referrals when the answer is not local. answer, obtain relevant authoritative data, reuse, keep cache data only within its TTL boundary.",
+      "asr_edits": 3,
+      "asr_wer": 0.0732
     },
     {
       "index": 37,
@@ -356,7 +478,10 @@
       "speaker": "NARIN",
       "script_text": "Ask, check, follow, answer, reuse. That is much easier to remember than a list of server names.",
       "render_text": "Ask, check, follow, answer, reuse. That is much easier to remember than a list of server names.",
-      "duration_seconds": 5.952
+      "duration_seconds": 5.952,
+      "asr_transcript": "Ask check, follow answer, reuse that is much easier to remember than a list of server names.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 38,
@@ -364,7 +489,10 @@
       "speaker": "NARIN",
       "script_text": "So DNS resolution is not a permanent answer fetched from one universal directory.",
       "render_text": "So D N S resolution is not a permanent answer fetched from one universal directory.",
-      "duration_seconds": 6.12
+      "duration_seconds": 6.12,
+      "asr_transcript": "So DNS resolution is not a permanent answer fetched from one universal directory.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     },
     {
       "index": 39,
@@ -372,7 +500,10 @@
       "speaker": "MAYA",
       "script_text": "It is a delegated answer assembled through distinct roles, sometimes shortened by memory, and always bounded by what the evidence and its reuse window actually support.",
       "render_text": "It is a delegated answer assembled through distinct roles, sometimes shortened by memory, and always bounded by what the evidence and its reuse window actually support.",
-      "duration_seconds": 10.104
+      "duration_seconds": 10.104,
+      "asr_transcript": "It is a delegated answer assembled through distinct roles, sometimes shortened by memory, and always bounded by what the evidence and its reuse window actually support.",
+      "asr_edits": 0,
+      "asr_wer": 0.0
     }
   ]
 }
