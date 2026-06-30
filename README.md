@@ -38,6 +38,13 @@ python packages/research/brief.py docs/research/cognee-evaluation-brief.md
 python packages/research/brief.py docs/research/dns-resolution-brief.md
 ```
 
+Validate the first grounded story artifacts:
+
+```bash
+python packages/story/validate.py docs/design/dns-resolution-story-plan.md
+python packages/story/validate.py evaluation/golden-episodes/dns-resolution-script.md
+```
+
 Run the retrieval citation benchmark:
 
 ```bash

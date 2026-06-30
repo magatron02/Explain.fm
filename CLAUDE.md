@@ -12,4 +12,4 @@ Read `BOOT.md`, then follow `AGENTS.md` before changing the repository.
 
 ## Current boundary
 
-Era 2 — Story is active. Start from `docs/research/dns-resolution-brief.md`; preserve every evidence boundary through planning and scripting. No production retrieval, memory, or voice dependency is approved. Do not reopen rejected retrieval candidates, reranking, or open-domain retrieval without new measured evidence.
+Era 2 — Story is active. The DNS plan and script are reviewed; see `evaluation/metrics/dns-story-script-review.md`. The current local voice route is rejected for full rendering by `evaluation/metrics/voxcpm2-local-smoke.md`. No production retrieval, memory, or voice dependency is approved.

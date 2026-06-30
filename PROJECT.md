@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 2 — Story is active. Era 1 passed its bounded-workflow exit review with a reviewed DNS topic, complete accepted-claim evidence packing, claim-level citations, and reviewed research output. Direct natural-language retrieval remains unapproved; no production retrieval or memory dependency has been selected. The first Era 2 slice turns the DNS research brief into an evaluated story plan, script, and audio prototype.
+Era 2 — Story is active. Era 1 passed its bounded-workflow exit review with a reviewed DNS topic, complete accepted-claim evidence packing, claim-level citations, and reviewed research output. The DNS story plan and script pass the first text rubric. Era 2 remains open because the current local VoxCPM2 path is too slow for a full episode and no human audio review has passed.

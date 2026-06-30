@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 from brief import validate_research_brief
 from packages.evaluation.retrieval import evaluate
 from packages.research.evidence_pack import build_topic_evidence_pack
+from packages.story.validate import validate_story_artifact
 from source_note import validate_source_note
 from wiki_links import validate_knowledge_index, validate_knowledge_links
 
@@ -64,6 +65,15 @@ class RepositoryContentTests(unittest.TestCase):
         for case in benchmark["cases"]:
             for expected in case["expected"]:
                 self.assertIn(f'`{expected["path"]}:{expected["line"]}`', pack, case["query"])
+
+    def test_story_artifacts_preserve_required_beats_and_citations(self):
+        artifacts = [
+            ROOT / "docs" / "design" / "dns-resolution-story-plan.md",
+            ROOT / "evaluation" / "golden-episodes" / "dns-resolution-script.md",
+        ]
+        for path in artifacts:
+            with self.subTest(path=path):
+                self.assertEqual(validate_story_artifact(path.read_text(encoding="utf-8"), ROOT), [])
 
 
 if __name__ == "__main__":
