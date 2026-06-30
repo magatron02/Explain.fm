@@ -1,0 +1,38 @@
+{
+  "type": "continuity",
+  "name": "dns-memory-continuity-v1",
+  "memory_query": "DNS resolution",
+  "memory_limit": 1,
+  "baseline_files": [
+    "docs/research/dns-resolution-brief.md"
+  ],
+  "cases": [
+    {
+      "id": "prior-mental-model",
+      "question": "Which memorable model can a follow-up reuse?",
+      "required_text": ["listener mental model", "delegated conversation", "ask, check, follow, answer, reuse"]
+    },
+    {
+      "id": "introduced-concepts",
+      "question": "Which concepts were already introduced to the listener?",
+      "required_text": ["concepts already introduced", "recursive, iterative, and authoritative roles", "cache and ttl"]
+    },
+    {
+      "id": "coverage-boundary",
+      "question": "Which nearby topics must not be assumed as prior knowledge?",
+      "required_text": ["does not establish prior coverage", "negative caching", "dnssec", "transport behavior"]
+    },
+    {
+      "id": "evaluation-history",
+      "question": "Did the prior episode pass, and how long was it?",
+      "required_text": ["305.246-second", "founder pass", "no reported defects"]
+    },
+    {
+      "id": "trust-boundary",
+      "question": "Can this context replace factual evidence?",
+      "required_text": ["evidence_role: context-only", "not factual evidence", "must still cite accepted sources"]
+    }
+  ],
+  "expected_control_passed": 0,
+  "expected_memory_passed": 5
+}

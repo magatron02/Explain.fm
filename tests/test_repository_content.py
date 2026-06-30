@@ -52,8 +52,10 @@ class RepositoryContentTests(unittest.TestCase):
         benchmarks = list(benchmark_dir.glob("*.json"))
         self.assertTrue(benchmarks, "repository must contain a retrieval benchmark")
         for path in benchmarks:
+            benchmark = json.loads(path.read_text(encoding="utf-8"))
+            if benchmark.get("type", "retrieval") != "retrieval":
+                continue
             with self.subTest(path=path):
-                benchmark = json.loads(path.read_text(encoding="utf-8"))
                 result = evaluate(benchmark, ROOT)
                 expected = int(benchmark.get("expected_passed", result.total))
                 self.assertEqual(result.passed, expected, result.failures)

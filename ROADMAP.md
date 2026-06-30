@@ -28,7 +28,7 @@ Prove that grounded research can become a coherent, natural, memorable episode s
 
 ## Era 3 — Memory
 
-**Status:** Active. The DNS episode is the baseline; no memory dependency is approved.
+**Status:** Active. The DNS episode is the baseline. Typed Markdown episode memory improved measured continuity-context availability from 0/5 to 5/5; explanation quality and listener outcomes remain unproven. No memory dependency is approved.
 
 Connect concepts, relationships, insights, and episode history without accumulating noisy source artifacts.
 
