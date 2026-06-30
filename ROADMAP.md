@@ -20,7 +20,7 @@ Prove that trusted sources can be collected, cleaned, traced, and retrieved with
 
 ## Era 2 — Story
 
-**Status:** Active. The DNS plan and script are accepted for a voice prototype; the audio gate remains open.
+**Status:** Active. The complete DNS audio prototype passes automated checks; human listening review remains open.
 
 Prove that grounded research can become a coherent, natural, memorable episode script and audio prototype.
 

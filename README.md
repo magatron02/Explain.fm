@@ -43,6 +43,7 @@ Validate the first grounded story artifacts:
 ```bash
 python packages/story/validate.py docs/design/dns-resolution-story-plan.md
 python packages/story/validate.py evaluation/golden-episodes/dns-resolution-script.md
+python packages/voice/validate.py evaluation/golden-episodes/dns-resolution-v1.manifest.json
 ```
 
 Run the retrieval citation benchmark:

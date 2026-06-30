@@ -12,6 +12,7 @@ from brief import validate_research_brief
 from packages.evaluation.retrieval import evaluate
 from packages.research.evidence_pack import build_topic_evidence_pack
 from packages.story.validate import validate_story_artifact
+from packages.voice.validate import validate_audio_manifest
 from source_note import validate_source_note
 from wiki_links import validate_knowledge_index, validate_knowledge_links
 
@@ -74,6 +75,10 @@ class RepositoryContentTests(unittest.TestCase):
         for path in artifacts:
             with self.subTest(path=path):
                 self.assertEqual(validate_story_artifact(path.read_text(encoding="utf-8"), ROOT), [])
+
+    def test_dns_audio_matches_its_script_and_manifest(self):
+        manifest = ROOT / "evaluation" / "golden-episodes" / "dns-resolution-v1.manifest.json"
+        self.assertEqual(validate_audio_manifest(manifest, ROOT, probe_audio=False), [])
 
 
 if __name__ == "__main__":

@@ -12,4 +12,4 @@ Read `BOOT.md`, then follow `AGENTS.md` before changing the repository.
 
 ## Current boundary
 
-Era 2 — Story is active. The DNS plan and script are reviewed; see `evaluation/metrics/dns-story-script-review.md`. The current local voice route is rejected for full rendering by `evaluation/metrics/voxcpm2-local-smoke.md`. No production retrieval, memory, or voice dependency is approved.
+Era 2 — Story is active. The DNS audio prototype and manifest pass automated checks; see `evaluation/metrics/dns-audio-automated-review.md`. Human listening review remains required, and no production voice dependency is approved.

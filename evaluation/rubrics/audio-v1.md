@@ -5,7 +5,7 @@ Use this rubric on a complete rendered episode. A short smoke sample cannot pass
 ## Automated gates
 
 - Audio covers every approved speaker turn in order.
-- The artifact records script revision, renderer, model revision, configuration, speaker mapping, and generation status.
+- The artifact records script revision, renderer, model identifier, exposed revision or explicit revision limitation, configuration, speaker mapping, and generation status.
 - The file opens, has a declared sample rate and channel layout, and contains no missing or corrupt segment.
 - Text transformations and partial renders are explicitly reported.
 

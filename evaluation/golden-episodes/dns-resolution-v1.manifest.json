@@ -1,0 +1,378 @@
+{
+  "status": "automated_gates_passed_listening_pending",
+  "artifact": "evaluation/golden-episodes/dns-resolution-v1.mp3",
+  "artifact_sha256": "e836c0aa9c6c7183ea080ea656270335f28fa98bea5b5ea238671bd953834fc6",
+  "script": "evaluation/golden-episodes/dns-resolution-script.md",
+  "script_sha256": "e2f06453f49bddef710972979a76d7396dcb762dd04bafeb2564642ed1b98e6e",
+  "script_commit": "f76974237c75a3243f81d391f66b244c6799c658",
+  "renderer": {
+    "provider": "OpenBMB official VoxCPM-Demo Hugging Face Space",
+    "space": "openbmb/VoxCPM-Demo",
+    "space_sha": "466abca91d371190950871c97d34ea7da6e2a0f1",
+    "api": "/generate",
+    "model": "VoxCPM2",
+    "model_revision": null,
+    "limitation": "The public Space does not expose its hidden backend model revision.",
+    "disclosure": "The public Space logs submitted request text; this script was already public in the repository."
+  },
+  "voice_configuration": {
+    "method": "voice design seeds followed by controllable cloning",
+    "controls": {
+      "MAYA": "A calm adult woman podcast host, clear, warm, curious, natural pace, confident but not theatrical.",
+      "NARIN": "A thoughtful adult man co-host, clear, conversational, curious, natural pace, slightly lighter energy."
+    },
+    "cfg": 2.0,
+    "normalize": false,
+    "denoise": false
+  },
+  "declared_transformations": {
+    "DNS": "D N S",
+    "TTL": "T T L",
+    "AAAA": "quad A"
+  },
+  "assembly": {
+    "tool": "FFmpeg 8.0",
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "within_section_pause_seconds": 0.25,
+    "between_section_pause_seconds": 0.65,
+    "segment_loudness_target_lufs": -18,
+    "true_peak_target_db": -2,
+    "encoding": "MP3 192 kbps"
+  },
+  "automated_results": {
+    "turns_expected": 40,
+    "turns_rendered": 40,
+    "duration_seconds": 303.974,
+    "size_bytes": 7296941,
+    "bit_rate": 192041,
+    "codec": "mp3",
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "integrated_loudness_lufs": -18.7,
+    "loudness_range_lu": 2.8,
+    "max_volume_db": -2.2
+  },
+  "turns": [
+    {
+      "index": 0,
+      "section": "Hook",
+      "speaker": "MAYA",
+      "script_text": "You ask for a name online, and a moment later your device has somewhere to send the request. It feels like one quick lookup.",
+      "render_text": "You ask for a name online, and a moment later your device has somewhere to send the request. It feels like one quick lookup.",
+      "duration_seconds": 8.184
+    },
+    {
+      "index": 1,
+      "section": "Hook",
+      "speaker": "NARIN",
+      "script_text": "As if the internet keeps one enormous directory?",
+      "render_text": "As if the internet keeps one enormous directory?",
+      "duration_seconds": 2.76
+    },
+    {
+      "index": 2,
+      "section": "Hook",
+      "speaker": "MAYA",
+      "script_text": "Exactly. But the useful mental model is not one directory. It is a delegated conversation—and sometimes that conversation does not happen at all because an earlier answer can still be reused.",
+      "render_text": "Exactly. But the useful mental model is not one directory. It is a delegated conversation—and sometimes that conversation does not happen at all because an earlier answer can still be reused.",
+      "duration_seconds": 13.152
+    },
+    {
+      "index": 3,
+      "section": "Hook",
+      "speaker": "NARIN",
+      "script_text": "So the tiny pause hides either a journey or a memory.",
+      "render_text": "So the tiny pause hides either a journey or a memory.",
+      "duration_seconds": 4.824
+    },
+    {
+      "index": 4,
+      "section": "Motivation",
+      "speaker": "MAYA",
+      "script_text": "That distinction explains two everyday mysteries: why a repeated lookup can avoid going back to the original source, and why the answer is never something a resolver should remember forever.",
+      "render_text": "That distinction explains two everyday mysteries: why a repeated lookup can avoid going back to the original source, and why the answer is never something a resolver should remember forever.",
+      "duration_seconds": 12.672
+    },
+    {
+      "index": 5,
+      "section": "Motivation",
+      "speaker": "NARIN",
+      "script_text": "The speed and the expiry come from the same design?",
+      "render_text": "The speed and the expiry come from the same design?",
+      "duration_seconds": 3.864
+    },
+    {
+      "index": 6,
+      "section": "Motivation",
+      "speaker": "MAYA",
+      "script_text": "Right. Reuse saves work. A time limit prevents that reused data from becoming permanent truth.",
+      "render_text": "Right. Reuse saves work. A time limit prevents that reused data from becoming permanent truth.",
+      "duration_seconds": 6.12
+    },
+    {
+      "index": 7,
+      "section": "Problem",
+      "speaker": "NARIN",
+      "script_text": "Let me try the simple version: my device asks DNS for a name, DNS returns an address, done.",
+      "render_text": "Let me try the simple version: my device asks D N S for a name, D N S returns an address, done.",
+      "duration_seconds": 6.264
+    },
+    {
+      "index": 8,
+      "section": "Problem",
+      "speaker": "MAYA",
+      "script_text": "That sentence collapses several jobs into one. A resolver asks questions for a client. In recursive mode, the server takes responsibility for obtaining a final answer. During iterative resolution, the next response may instead be a referral telling the resolver where to continue.",
+      "render_text": "That sentence collapses several jobs into one. A resolver asks questions for a client. In recursive mode, the server takes responsibility for obtaining a final answer. During iterative resolution, the next response may instead be a referral telling the resolver where to continue.",
+      "duration_seconds": 16.344
+    },
+    {
+      "index": 9,
+      "section": "Problem",
+      "speaker": "NARIN",
+      "script_text": "And the authoritative server?",
+      "render_text": "And the authoritative server?",
+      "duration_seconds": 1.632
+    },
+    {
+      "index": 10,
+      "section": "Problem",
+      "speaker": "MAYA",
+      "script_text": "Different job. It answers from local knowledge about the zone it serves. It is not the part wandering around asking other servers.",
+      "render_text": "Different job. It answers from local knowledge about the zone it serves. It is not the part wandering around asking other servers.",
+      "duration_seconds": 8.352
+    },
+    {
+      "index": 11,
+      "section": "Explanation",
+      "speaker": "MAYA",
+      "script_text": "Start with the question. It identifies a domain name, a query type, and a query class.",
+      "render_text": "Start with the question. It identifies a domain name, a query type, and a query class.",
+      "duration_seconds": 5.952
+    },
+    {
+      "index": 12,
+      "section": "Explanation",
+      "speaker": "NARIN",
+      "script_text": "So even the question is more precise than “where is this name?”",
+      "render_text": "So even the question is more precise than “where is this name?”",
+      "duration_seconds": 4.344
+    },
+    {
+      "index": 13,
+      "section": "Explanation",
+      "speaker": "MAYA",
+      "script_text": "Yes. Then the resolver checks local information first. If it cannot answer there, it chooses servers, sends queries, and examines the responses.",
+      "render_text": "Yes. Then the resolver checks local information first. If it cannot answer there, it chooses servers, sends queries, and examines the responses.",
+      "duration_seconds": 10.104
+    },
+    {
+      "index": 14,
+      "section": "Explanation",
+      "speaker": "NARIN",
+      "script_text": "Where does the hierarchy enter?",
+      "render_text": "Where does the hierarchy enter?",
+      "duration_seconds": 1.632
+    },
+    {
+      "index": 15,
+      "section": "Explanation",
+      "speaker": "MAYA",
+      "script_text": "DNS names form a tree. Information is organized into zones, and referrals let the resolver continue through that structure until it reaches relevant authoritative knowledge.",
+      "render_text": "D N S names form a tree. Information is organized into zones, and referrals let the resolver continue through that structure until it reaches relevant authoritative knowledge.",
+      "duration_seconds": 11.712
+    },
+    {
+      "index": 16,
+      "section": "Explanation",
+      "speaker": "NARIN",
+      "script_text": "Then the answer travels back through the resolver to the client.",
+      "render_text": "Then the answer travels back through the resolver to the client.",
+      "duration_seconds": 3.072
+    },
+    {
+      "index": 17,
+      "section": "Explanation",
+      "speaker": "MAYA",
+      "script_text": "And the response has structure. The base message format has a header followed by question, answer, authority, and additional sections. That matters, but it is supporting machinery. The core idea is still: check, ask, follow, and return.",
+      "render_text": "And the response has structure. The base message format has a header followed by question, answer, authority, and additional sections. That matters, but it is supporting machinery. The core idea is still: check, ask, follow, and return.",
+      "duration_seconds": 17.16
+    },
+    {
+      "index": 18,
+      "section": "Examples",
+      "speaker": "NARIN",
+      "script_text": "Give me a concrete run.",
+      "render_text": "Give me a concrete run.",
+      "duration_seconds": 1.632
+    },
+    {
+      "index": 19,
+      "section": "Examples",
+      "speaker": "MAYA",
+      "script_text": "Imagine asking for an address record for a made-up service name. On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.",
+      "render_text": "Imagine asking for an address record for a made-up service name. On the first run, the resolver has no reusable answer. It checks local information, follows the needed referrals, and obtains an answer from authoritative data.",
+      "duration_seconds": 14.592
+    },
+    {
+      "index": 20,
+      "section": "Examples",
+      "speaker": "NARIN",
+      "script_text": "And address answers use A or AAAA records.",
+      "render_text": "And address answers use A or quad A records.",
+      "duration_seconds": 3.072
+    },
+    {
+      "index": 21,
+      "section": "Examples",
+      "speaker": "MAYA",
+      "script_text": "Correct. Now ask again while the cached record is still reusable. The resolver may answer from that cache before consulting an authoritative server again.",
+      "render_text": "Correct. Now ask again while the cached record is still reusable. The resolver may answer from that cache before consulting an authoritative server again.",
+      "duration_seconds": 9.312
+    },
+    {
+      "index": 22,
+      "section": "Examples",
+      "speaker": "NARIN",
+      "script_text": "Same question, shorter journey.",
+      "render_text": "Same question, shorter journey.",
+      "duration_seconds": 2.424
+    },
+    {
+      "index": 23,
+      "section": "Examples",
+      "speaker": "MAYA",
+      "script_text": "Or no external journey at all.",
+      "render_text": "Or no external journey at all.",
+      "duration_seconds": 2.424
+    },
+    {
+      "index": 24,
+      "section": "Comparison",
+      "speaker": "NARIN",
+      "script_text": "I want the three roles in one clean comparison.",
+      "render_text": "I want the three roles in one clean comparison.",
+      "duration_seconds": 2.76
+    },
+    {
+      "index": 25,
+      "section": "Comparison",
+      "speaker": "MAYA",
+      "script_text": "Recursive means: “Take responsibility for bringing me a final answer.” Iterative means: “Here is a referral; continue the search there.” Authoritative means: “I can answer from local knowledge for the zone I serve.”",
+      "render_text": "Recursive means: “Take responsibility for bringing me a final answer.” Iterative means: “Here is a referral; continue the search there.” Authoritative means: “I can answer from local knowledge for the zone I serve.”",
+      "duration_seconds": 13.464
+    },
+    {
+      "index": 26,
+      "section": "Comparison",
+      "speaker": "NARIN",
+      "script_text": "One accepts responsibility, one advances the route, and one holds the relevant local data.",
+      "render_text": "One accepts responsibility, one advances the route, and one holds the relevant local data.",
+      "duration_seconds": 5.16
+    },
+    {
+      "index": 27,
+      "section": "Comparison",
+      "speaker": "MAYA",
+      "script_text": "Exactly. Keeping those roles separate prevents the system from sounding like one mysterious DNS machine.",
+      "render_text": "Exactly. Keeping those roles separate prevents the system from sounding like one mysterious D N S machine.",
+      "duration_seconds": 6.912
+    },
+    {
+      "index": 28,
+      "section": "Common mistakes",
+      "speaker": "NARIN",
+      "script_text": "Mistake one: every lookup goes directly to an authoritative server.",
+      "render_text": "Mistake one: every lookup goes directly to an authoritative server.",
+      "duration_seconds": 4.032
+    },
+    {
+      "index": 29,
+      "section": "Common mistakes",
+      "speaker": "MAYA",
+      "script_text": "Cached data can answer first, so no.",
+      "render_text": "Cached data can answer first, so no.",
+      "duration_seconds": 3.072
+    },
+    {
+      "index": 30,
+      "section": "Common mistakes",
+      "speaker": "NARIN",
+      "script_text": "Mistake two: an authoritative server searches other servers until it finds something.",
+      "render_text": "Mistake two: an authoritative server searches other servers until it finds something.",
+      "duration_seconds": 5.952
+    },
+    {
+      "index": 31,
+      "section": "Common mistakes",
+      "speaker": "MAYA",
+      "script_text": "Also no. Its defining role here is answering from local zone knowledge.",
+      "render_text": "Also no. Its defining role here is answering from local zone knowledge.",
+      "duration_seconds": 5.16
+    },
+    {
+      "index": 32,
+      "section": "Common mistakes",
+      "speaker": "NARIN",
+      "script_text": "Mistake three: if a record has not reached its TTL, the answer is guaranteed to be correct.",
+      "render_text": "Mistake three: if a record has not reached its T T L, the answer is guaranteed to be correct.",
+      "duration_seconds": 6.264
+    },
+    {
+      "index": 33,
+      "section": "Common mistakes",
+      "speaker": "MAYA",
+      "script_text": "TTL says how long cached data may be reused before the information source should be consulted again. It is a reuse boundary, not a proof that the underlying claim is true.",
+      "render_text": "T T L says how long cached data may be reused before the information source should be consulted again. It is a reuse boundary, not a proof that the underlying claim is true.",
+      "duration_seconds": 10.92
+    },
+    {
+      "index": 34,
+      "section": "Common mistakes",
+      "speaker": "NARIN",
+      "script_text": "And not every DNS question has to request an address, because the question carries a record type.",
+      "render_text": "And not every D N S question has to request an address, because the question carries a record type.",
+      "duration_seconds": 5.472
+    },
+    {
+      "index": 35,
+      "section": "Common mistakes",
+      "speaker": "MAYA",
+      "script_text": "Good. An address lookup is one useful example, not the definition of every DNS exchange.",
+      "render_text": "Good. An address lookup is one useful example, not the definition of every D N S exchange.",
+      "duration_seconds": 7.08
+    },
+    {
+      "index": 36,
+      "section": "Recap",
+      "speaker": "MAYA",
+      "script_text": "Five verbs. Ask: form a question with a name, type, and class. Check: inspect local information and cache. Follow: use referrals when the answer is not local. Answer: obtain relevant authoritative data. Reuse: keep cached data only within its TTL boundary.",
+      "render_text": "Five verbs. Ask: form a question with a name, type, and class. Check: inspect local information and cache. Follow: use referrals when the answer is not local. Answer: obtain relevant authoritative data. Reuse: keep cached data only within its T T L boundary.",
+      "duration_seconds": 21.0
+    },
+    {
+      "index": 37,
+      "section": "Recap",
+      "speaker": "NARIN",
+      "script_text": "Ask, check, follow, answer, reuse. That is much easier to remember than a list of server names.",
+      "render_text": "Ask, check, follow, answer, reuse. That is much easier to remember than a list of server names.",
+      "duration_seconds": 5.952
+    },
+    {
+      "index": 38,
+      "section": "Takeaway",
+      "speaker": "NARIN",
+      "script_text": "So DNS resolution is not a permanent answer fetched from one universal directory.",
+      "render_text": "So D N S resolution is not a permanent answer fetched from one universal directory.",
+      "duration_seconds": 6.12
+    },
+    {
+      "index": 39,
+      "section": "Takeaway",
+      "speaker": "MAYA",
+      "script_text": "It is a delegated answer assembled through distinct roles, sometimes shortened by memory, and always bounded by what the evidence and its reuse window actually support.",
+      "render_text": "It is a delegated answer assembled through distinct roles, sometimes shortened by memory, and always bounded by what the evidence and its reuse window actually support.",
+      "duration_seconds": 10.104
+    }
+  ]
+}
