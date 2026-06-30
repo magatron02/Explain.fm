@@ -7,6 +7,13 @@ import sys
 from pathlib import Path
 
 WIKILINK = re.compile(r"!?\[\[([^\]]+)\]\]")
+INDEXED_DIRECTORIES = (
+    "knowledge/obsidian/sources",
+    "knowledge/topics",
+    "knowledge/examples",
+    "knowledge/analogies",
+    "knowledge/mental-models",
+)
 
 
 def validate_knowledge_links(repo_root: Path) -> list[str]:
@@ -36,17 +43,37 @@ def validate_knowledge_links(repo_root: Path) -> list[str]:
     return errors
 
 
+def validate_knowledge_index(repo_root: Path) -> list[str]:
+    index = repo_root / "knowledge" / "index.md"
+    if not index.is_file():
+        return ["knowledge/index.md: missing knowledge index"]
+
+    indexed = {
+        Path(raw.split("|", 1)[0].split("#", 1)[0].strip()).stem.casefold()
+        for raw in WIKILINK.findall(index.read_text(encoding="utf-8"))
+    }
+    errors: list[str] = []
+    for relative in INDEXED_DIRECTORIES:
+        directory = repo_root / relative
+        for note in directory.rglob("*.md"):
+            if note.name.casefold() == "readme.md":
+                continue
+            if note.stem.casefold() not in indexed:
+                errors.append(f"knowledge/index.md: missing entry for {note.relative_to(repo_root)}")
+    return errors
+
+
 def main(argv: list[str]) -> int:
     if len(argv) not in (1, 2):
         print("usage: python packages/core/wiki_links.py [repo-root]", file=sys.stderr)
         return 2
     root = Path(argv[1]) if len(argv) == 2 else Path.cwd()
-    errors = validate_knowledge_links(root)
+    errors = validate_knowledge_links(root) + validate_knowledge_index(root)
     for error in errors:
         print(error, file=sys.stderr)
     if errors:
         return 1
-    print("knowledge wikilinks: valid")
+    print("knowledge vault: valid")
     return 0
 
 

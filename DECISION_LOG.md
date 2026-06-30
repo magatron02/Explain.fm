@@ -1,13 +1,12 @@
 # Decision Log
 
-No architecture decisions have been recorded yet.
-
 Create one file per accepted decision under `docs/adr/` and add it to the index below. Proposed decisions belong in `docs/rfc/` until accepted.
 
 ## Decision index
 
 | ADR | Status | Date | Decision |
 | --- | --- | --- | --- |
+| [ADR-0001](docs/adr/0001-adapt-second-brain-vault-workflow.md) | Accepted | 2026-06-29 | Adapt second-brain index, log, query, and health patterns without replacing Explain.fm boundaries. |
 
 ## ADR template
 

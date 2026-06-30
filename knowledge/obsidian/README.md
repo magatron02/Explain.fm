@@ -9,6 +9,8 @@ The repository root `ExplainFM_Project` is the primary Obsidian vault. This dire
 - `templates/source.md` — native Obsidian template for one source.
 - `../raw/` — original permitted files or captures; never cleaned in place.
 - `../topics/`, `../examples/`, `../analogies/`, `../mental-models/` — curated knowledge derived from accepted sources.
+- `../index.md` — reviewed entrypoint to accepted sources, topics, and research outputs.
+- `../log.md` — append-only record of completed knowledge operations.
 
 ## Ingest workflow
 
@@ -17,5 +19,6 @@ The repository root `ExplainFM_Project` is the primary Obsidian vault. This dire
 3. Put any permitted original artifact in `knowledge/raw/` and link it from the note.
 4. Apply `playbooks/new-source.md`; reject unsupported or unusable material.
 5. Move an accepted note to `sources/`, then create linked derived notes in the appropriate knowledge folders.
+6. Update `knowledge/index.md`, run the health checks, and append the completed operation to `knowledge/log.md`.
 
 Do not store raw HTML, ads, cookie banners, navigation, duplicate content, or extraction noise. Local `.obsidian/` settings remain excluded from Git.

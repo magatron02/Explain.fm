@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "packages" / "core"))
 
-from wiki_links import validate_knowledge_links
+from wiki_links import validate_knowledge_index, validate_knowledge_links
 
 
 class WikiLinkTests(unittest.TestCase):
@@ -36,6 +36,20 @@ class WikiLinkTests(unittest.TestCase):
             (knowledge / "one" / "Topic.md").write_text("one\n", encoding="utf-8")
             (knowledge / "two" / "Topic.md").write_text("two\n", encoding="utf-8")
             self.assertTrue(any("ambiguous link" in error for error in validate_knowledge_links(root)))
+
+    def test_index_requires_every_curated_note(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            topics = root / "knowledge" / "topics"
+            topics.mkdir(parents=True)
+            (root / "knowledge" / "index.md").write_text("# Index\n", encoding="utf-8")
+            (topics / "Topic.md").write_text("# Topic\n", encoding="utf-8")
+
+            errors = validate_knowledge_index(root)
+
+            self.assertEqual(len(errors), 1)
+            self.assertIn("missing entry for", errors[0])
+            self.assertIn("Topic.md", errors[0])
 
 
 if __name__ == "__main__":
