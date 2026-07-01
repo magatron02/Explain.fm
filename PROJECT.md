@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 3 — Memory is active. Era 2 passed with a grounded DNS plan, script, complete audio prototype, automated checks, and Founder listening approval. The current task boundary is to prove that attributable memory improves continuity or explanation quality without storing source noise or adopting an unmeasured dependency.
+Era 4 — Personalization is active. Era 3 passed with attributable episode memory, a 0/5 to 5/5 continuity-context improvement, and a memory-aware decision that prevented a 9/9-beat duplicate episode. The current boundary is to test explicit listener preferences without implicit profiling, cross-listener leakage, or premature infrastructure.

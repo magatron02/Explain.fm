@@ -28,7 +28,7 @@ Prove that grounded research can become a coherent, natural, memorable episode s
 
 ## Era 3 — Memory
 
-**Status:** Active. The DNS episode is the baseline. Typed Markdown episode memory improved measured continuity-context availability from 0/5 to 5/5; explanation quality and listener outcomes remain unproven. No memory dependency is approved.
+**Status:** Complete as of 2026-07-01. See `evaluation/metrics/era-3-exit-review.md`.
 
 Connect concepts, relationships, insights, and episode history without accumulating noisy source artifacts.
 
@@ -36,7 +36,7 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personalization
 
-**Status:** Future.
+**Status:** Active. No listener-profile implementation or implicit preference inference is approved.
 
 Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
 

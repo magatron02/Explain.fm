@@ -8,7 +8,7 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-Era 3 — Memory is active. Era 2 passed with the grounded DNS episode, automated artifact checks, and Founder listening approval. No production memory dependency is approved; the next slice must prove measurable continuity or explanation improvement.
+Era 4 — Personalization is active. Era 3 passed with attributable Markdown episode memory and measured continuity/planning improvements; no production memory dependency was added. The next slice must use explicit listener preferences and prove a learning benefit without implicit profiling.
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
 
@@ -51,6 +51,12 @@ Run the retrieval citation benchmark:
 ```bash
 python packages/evaluation/retrieval.py
 python packages/evaluation/retrieval.py evaluation/benchmarks/cognee-paraphrase-challenge.json
+```
+
+Run the episode-memory continuity benchmark:
+
+```bash
+python packages/evaluation/continuity.py evaluation/benchmarks/dns-memory-continuity.json
 ```
 
 Run the complete local quality gate:

@@ -2,6 +2,7 @@
 type: episode-memory
 status: active
 episode: "evaluation/golden-episodes/dns-resolution-v1.manifest.json"
+episode_sha256: "ada40ca2522a2178531a038f228c4780b34c0cc727db3d71e33760402c639238"
 scope: global
 confidence: high
 evidence_role: context-only

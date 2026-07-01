@@ -29,6 +29,20 @@ class EpisodeMemoryTests(unittest.TestCase):
             validate_episode_memory(text, ROOT),
         )
 
+    def test_changed_episode_fails_hash_check(self):
+        text = MEMORY.read_text(encoding="utf-8").replace(
+            "ada40ca2522a2178531a038f228c4780b34c0cc727db3d71e33760402c639238",
+            "0" * 64,
+        )
+        self.assertIn("episode_sha256 does not match episode", validate_episode_memory(text, ROOT))
+
+    def test_superseded_memory_requires_replacement(self):
+        text = MEMORY.read_text(encoding="utf-8").replace("status: active", "status: superseded")
+        self.assertIn(
+            "superseded memory requires an existing superseded_by file",
+            validate_episode_memory(text, ROOT),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

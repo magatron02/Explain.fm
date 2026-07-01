@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import re
+from hashlib import sha256
 from pathlib import Path
 
 CITATION = re.compile(r"`([^`\n]+):(\d+)`")
-REQUIRED_METADATA = ("episode", "scope", "confidence", "evidence_role", "created")
+REQUIRED_METADATA = ("episode", "episode_sha256", "scope", "confidence", "evidence_role", "created")
 REQUIRED_SECTIONS = (
     "## Listener mental model",
     "## Concepts already introduced",
@@ -57,8 +58,19 @@ def validate_episode_memory(text: str, repo_root: Path) -> list[str]:
         errors.append("evidence_role must be context-only")
 
     episode = metadata.get("episode", "")
-    if episode and _repository_file(episode, repo_root) is None:
+    episode_file = _repository_file(episode, repo_root) if episode else None
+    if episode and episode_file is None:
         errors.append("episode must reference an existing repository file")
+    expected_hash = metadata.get("episode_sha256", "")
+    if expected_hash and not re.fullmatch(r"[0-9a-f]{64}", expected_hash):
+        errors.append("episode_sha256 must be a lowercase SHA-256")
+    elif episode_file and expected_hash and sha256(episode_file.read_bytes()).hexdigest() != expected_hash:
+        errors.append("episode_sha256 does not match episode")
+
+    if metadata.get("status") == "superseded":
+        replacement = metadata.get("superseded_by", "")
+        if not replacement or _repository_file(replacement, repo_root) is None:
+            errors.append("superseded memory requires an existing superseded_by file")
 
     for section in REQUIRED_SECTIONS:
         if section not in text:

@@ -12,4 +12,4 @@ Read `BOOT.md`, then follow `AGENTS.md` before changing the repository.
 
 ## Current boundary
 
-Era 3 — Memory is active. Use the passed DNS episode and `evaluation/metrics/era-2-exit-review.md` as the baseline. Store only attributable concepts, relationships, insights, mental models, episode history, or approved listener context. No production memory dependency is approved; the earlier Cognee candidate remains rejected.
+Era 4 — Personalization is active. Use `evaluation/metrics/era-3-exit-review.md` as the boundary. Accept only explicit listener preferences, keep listener data isolated and removable, and do not infer sensitive traits or claim learning improvement without a paired evaluation. No production personalization or memory dependency is approved.
