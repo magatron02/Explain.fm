@@ -1,6 +1,6 @@
 ---
 type: personalization-experiment
-status: preference-fit-passed-learning-unmeasured
+status: complete-option-a-rejected
 preference_scope: request-only
 preference: "Short, visual, low-jargon Thai explanation"
 retention: "Evaluation artifact only; no listener profile created"
@@ -45,7 +45,7 @@ The Post-it note is a declared teaching analogy, not a factual claim about DNS s
 - Render history: the official Space remained queue-full even after HF login; the local route succeeded after freeing commit memory
 - Provider decision: no paid or alternative renderer was added
 - Human preference-fit review: **Revise** — MAYA sounded natural, but some sentence endings were cut; NARIN sounded robotic
-- Comparative understanding review: Not measured; no comprehension answer was provided
+- Comparative understanding review: Not evaluated on rejected audio
 - Comprehension prompt: Why should the system check the answer again after the remembered answer expires?
 
 ## Audio revision v2
@@ -59,4 +59,29 @@ Two measured pauses inside the final NARIN turn were shortened from 0.431 and 0.
 - SHA-256: `70a8f5f39d2ca15efb58f8019e876cfb60170168c9b3cb9eca541ff48b762ef7`
 - Automated silence check: no interval of at least 0.45 seconds detected at -40 dB
 - Human preference-fit review: **Pass** — Founder, 2026-07-01
-- Comparative understanding review: Not measured; no comprehension answer was provided
+- Comparative understanding review: **Fail** — the user selected distractor 2 (“to make the audio louder”) instead of the supported reason
+
+## Corrective check
+
+After explicit corrective feedback, the user correctly selected “ask the information source again” rather than “keep using the old answer.” This confirms the correction was understood, but it is not attributed to the v2 audio.
+
+## Learning revision v3
+
+The final NARIN turn is revised to make the action and reason adjacent:
+
+**NARIN-V3:** พอ ทีทีแอล หมด ระบบจะไม่ใช้โพสต์อิทใบเดิมต่อ แต่จะถามแหล่งข้อมูลใหม่ เพื่อไม่ให้ข้อมูลเก่าถูกใช้ตลอดไป
+
+Only this turn is rerendered. All passed MAYA audio and the first NARIN turn remain unchanged.
+
+- Audio artifact: `thai-concise-dns-v3.mp3`
+- Duration: 22.466 seconds
+- Format: MP3, 192 kbps, mono, 48 kHz
+- SHA-256: `2187953a17e61641e3784a75cf73c7c4359d33cce910d97d4c5a13c272a4f52d`
+- Automated silence check: no interval of at least 0.45 seconds detected at -40 dB
+- Human preference-fit review: **Pass** — Founder, 2026-07-01
+- Transfer comprehension review: **Fail** — the user selected “must ask the information source every time” instead of “may reuse the cached answer while TTL remains valid”
+- Retention: v3 audio deleted after the failed learning gate; hash retained for traceability
+
+## Final decision
+
+Option A is rejected. It met the explicit brevity and audio preferences but failed both the initial and transfer comprehension checks. Do not promote this concise adaptation as effective personalization.
