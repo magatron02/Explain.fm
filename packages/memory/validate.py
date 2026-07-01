@@ -40,6 +40,11 @@ def _repository_file(relative: str, repo_root: Path) -> Path | None:
     return target if target.is_file() else None
 
 
+def text_sha256(path: Path) -> str:
+    """Hash UTF-8 text with platform newlines normalized by text mode."""
+    return sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+
+
 def validate_episode_memory(text: str, repo_root: Path) -> list[str]:
     errors: list[str] = []
     metadata = _metadata(text)
@@ -64,7 +69,7 @@ def validate_episode_memory(text: str, repo_root: Path) -> list[str]:
     expected_hash = metadata.get("episode_sha256", "")
     if expected_hash and not re.fullmatch(r"[0-9a-f]{64}", expected_hash):
         errors.append("episode_sha256 must be a lowercase SHA-256")
-    elif episode_file and expected_hash and sha256(episode_file.read_bytes()).hexdigest() != expected_hash:
+    elif episode_file and expected_hash and text_sha256(episode_file) != expected_hash:
         errors.append("episode_sha256 does not match episode")
 
     if metadata.get("status") == "superseded":

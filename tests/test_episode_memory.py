@@ -1,11 +1,12 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
 sys.path.insert(0, str(ROOT))
 
-from packages.memory.validate import validate_episode_memory
+from packages.memory.validate import text_sha256, validate_episode_memory
 
 MEMORY = ROOT / "memory" / "episodes" / "dns-resolution-v1.md"
 
@@ -31,10 +32,18 @@ class EpisodeMemoryTests(unittest.TestCase):
 
     def test_changed_episode_fails_hash_check(self):
         text = MEMORY.read_text(encoding="utf-8").replace(
-            "ada40ca2522a2178531a038f228c4780b34c0cc727db3d71e33760402c639238",
+            "d4b19716947a8ebb1aa53b0820a213eab53db22342014cc8fa16a7699573f722",
             "0" * 64,
         )
         self.assertIn("episode_sha256 does not match episode", validate_episode_memory(text, ROOT))
+
+    def test_text_hash_ignores_platform_newlines(self):
+        with tempfile.TemporaryDirectory() as directory:
+            lf = Path(directory) / "lf.txt"
+            crlf = Path(directory) / "crlf.txt"
+            lf.write_bytes(b"one\ntwo\n")
+            crlf.write_bytes(b"one\r\ntwo\r\n")
+            self.assertEqual(text_sha256(lf), text_sha256(crlf))
 
     def test_superseded_memory_requires_replacement(self):
         text = MEMORY.read_text(encoding="utf-8").replace("status: active", "status: superseded")
