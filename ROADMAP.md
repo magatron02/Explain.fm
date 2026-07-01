@@ -36,7 +36,7 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personalization
 
-**Status:** Active. No listener-profile implementation or implicit preference inference is approved.
+**Status:** Active. A request-scoped concise Thai adaptation passed preference-fit review; learning improvement remains unmeasured. No listener-profile implementation or implicit preference inference is approved.
 
 Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
 
