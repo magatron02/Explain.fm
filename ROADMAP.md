@@ -36,7 +36,7 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personalization
 
-**Status:** Active. Concise, detailed, and interactive-scenario Thai methods all failed their comprehension gates; preference fit has not produced a measured learning benefit. No listener-profile implementation or implicit preference inference is approved.
+**Status:** Active. Concise, detailed, and interactive-scenario Thai methods all failed their comprehension gates. The next valid gate is a blinded cohort study under `evaluation/rubrics/listener-comprehension-v1.md`; no listener-profile implementation or implicit preference inference is approved.
 
 Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
 
