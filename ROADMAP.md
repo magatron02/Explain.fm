@@ -34,13 +34,13 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 **Exit:** memory measurably improves continuity and explanation quality.
 
-## Era 4 — Personalization
+## Era 4 — Personal Listening
 
-**Status:** Active. Three single-listener methods failed. A blinded, aggregate-only Thai cohort packet is ready under `evaluation/studies/dns-cache-visual-v1/`; recruitment and learning evidence remain outstanding. No listener-profile implementation or implicit preference inference is approved.
+**Status:** Active. Build the smallest complete flow from a topic explicitly chosen by the user to a sourced personal episode suitable for listening while working.
 
-Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
+Adapt depth, examples, pacing, and topic continuity only from explicit choices. Listening must not require a quiz, screen, cohort study, or implicit profile.
 
-**Exit:** personalization improves learning outcomes without narrowing accuracy or perspective.
+**Exit:** one user-chosen topic completes the existing research, story, voice, and evaluation pipeline; the resulting episode passes factual, source, and audio quality gates and is accepted by the user for background listening.
 
 ## Era 5 — Ecosystem
 

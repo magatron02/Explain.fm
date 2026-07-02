@@ -8,7 +8,7 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-Era 4 — Personalization is active. Era 3 passed with attributable Markdown episode memory and measured continuity/planning improvements; no production memory dependency was added. The next slice must use explicit listener preferences and prove a learning benefit without implicit profiling.
+Era 4 — Personal Listening is active. The next slice is a complete path from an explicitly chosen topic to a sourced, listenable episode for background listening. Mandatory quizzes, cohort studies, implicit profiling, and production memory infrastructure are out of scope.
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
 

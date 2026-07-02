@@ -4,7 +4,7 @@ Explain.fm is an AI-native Knowledge Storytelling Platform that transforms trust
 
 ## Product outcome
 
-A listener should finish an episode with an accurate mental model: what the topic is, why it matters, how it works, which examples make it concrete, and where the boundaries of knowledge lie.
+A listener chooses a topic and receives an accurate, natural episode that can be followed while working without looking at a screen. Quizzes and comprehension tests are optional tools, not part of the listening experience or a release requirement.
 
 ## Product boundary
 
@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 4 — Personalization is active. Era 3 passed with attributable episode memory, a 0/5 to 5/5 continuity-context improvement, and a memory-aware decision that prevented a 9/9-beat duplicate episode. The current boundary is to test explicit listener preferences without implicit profiling, cross-listener leakage, or premature infrastructure.
+Era 4 — Personal Listening is active. The current boundary is a complete path from an explicitly chosen topic to a sourced, listenable personal episode. Do not add implicit profiling, mandatory quizzes, cohort studies, or premature infrastructure.
