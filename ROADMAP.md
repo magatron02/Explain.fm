@@ -36,7 +36,7 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personalization
 
-**Status:** Active. Concise, detailed, and interactive-scenario Thai methods all failed their comprehension gates. The next valid gate is a blinded cohort study under `evaluation/rubrics/listener-comprehension-v1.md`; no listener-profile implementation or implicit preference inference is approved.
+**Status:** Active. Three single-listener methods failed. A blinded, aggregate-only Thai cohort packet is ready under `evaluation/studies/dns-cache-visual-v1/`; recruitment and learning evidence remain outstanding. No listener-profile implementation or implicit preference inference is approved.
 
 Adapt depth, examples, pacing, and topic continuity to explicit listener preferences and history.
 
