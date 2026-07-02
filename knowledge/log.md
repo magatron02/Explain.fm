@@ -13,3 +13,7 @@ Passed link resolution, index completeness, source-note, citation, retrieval-bas
 ## 2026-06-30 evaluation | Era 1 exited
 
 Added a reviewed-topic evidence pack that carries all 18 accepted DNS claims with exact `file:line` provenance and covers every target in the unchanged 10-case DNS paraphrase benchmark. The 39-test quality gate passed. Era 1 exited for bounded researcher-operated workflows; direct natural-language retrieval remains unapproved.
+
+## 2026-07-02 ingest | AI Agents topic accepted
+
+Accepted two primary practitioner sources from OpenAI and Anthropic, added the AI Agents topic, and bounded the episode around goals, dynamic tool use, control loops, human handoff, and the distinction from chatbots and fixed workflows. No framework or vendor product was adopted.

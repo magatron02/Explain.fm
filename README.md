@@ -8,7 +8,7 @@ It is not a generic AI podcast generator, summarizer, or chatbot. The product ex
 
 ## Repository status
 
-Era 4 — Personal Listening is active. The next slice is a complete path from an explicitly chosen topic to a sourced, listenable episode for background listening. Mandatory quizzes, cohort studies, implicit profiling, and production memory infrastructure are out of scope.
+**Archived — 2026-07-02.** The personal topic-to-audio run did not meet the required continuity and speech-completeness standard. No candidate audio from that run is retained. See [ARCHIVED.md](ARCHIVED.md).
 
 Start with [BOOT.md](BOOT.md). Active delivery priorities live in [ROADMAP.md](ROADMAP.md); speculative ideas belong in [VISION_ROADMAP.md](VISION_ROADMAP.md).
 

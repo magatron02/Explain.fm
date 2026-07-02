@@ -48,7 +48,7 @@ class SearchTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            self.assertEqual(search_sources("what is the", root), [])
+            self.assertEqual(search_sources("what is the when", root), [])
 
     def test_markdown_headings_are_not_evidence(self):
         with tempfile.TemporaryDirectory() as directory:

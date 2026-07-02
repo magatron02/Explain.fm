@@ -12,4 +12,4 @@ Explain.fm is not a generic AI podcast generator, a summarizer, or a chatbot. It
 
 ## Current phase
 
-Era 4 — Personal Listening is active. The current boundary is a complete path from an explicitly chosen topic to a sourced, listenable personal episode. Do not add implicit profiling, mandatory quizzes, cohort studies, or premature infrastructure.
+The project is archived as of 2026-07-02 after the Era 4 personal-listening prototype failed its complete-episode review. No further implementation is active.

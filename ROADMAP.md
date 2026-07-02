@@ -36,11 +36,13 @@ Connect concepts, relationships, insights, and episode history without accumulat
 
 ## Era 4 — Personal Listening
 
-**Status:** Active. Build the smallest complete flow from a topic explicitly chosen by the user to a sourced personal episode suitable for listening while working.
+**Status:** Failed and archived on 2026-07-02. The “AI Agent คืออะไร” episode retained incomplete speech and discontinuous delivery after a segmented rerender. The founder rejected the project; no additional revision is approved.
 
 Adapt depth, examples, pacing, and topic continuity only from explicit choices. Listening must not require a quiz, screen, cohort study, or implicit profile.
 
 **Exit:** one user-chosen topic completes the existing research, story, voice, and evaluation pipeline; the resulting episode passes factual, source, and audio quality gates and is accepted by the user for background listening.
+
+**Outcome:** Exit criteria were not met.
 
 ## Era 5 — Ecosystem
 

@@ -11,7 +11,7 @@ DEFAULT_SOURCE_DIR = Path("knowledge/obsidian/sources")
 STOPWORDS = {
     "a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "how", "in", "into",
     "is", "it", "of", "on", "or", "that", "the", "this", "to", "what", "where", "which", "who",
-    "why", "with",
+    "when", "why", "with",
 }
 
 
