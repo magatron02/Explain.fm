@@ -34,6 +34,14 @@ Both packets teach exactly three targets: cached answers may be reused before TT
 6. Give anonymized responses to a scorer who cannot see X/Y assignment.
 7. Commit only the aggregate table and decision. Never commit responses or identity mappings.
 
+Enter the aggregate table as JSON with `control` and `personalized` objects. Each object requires `assigned`, `completed_immediate`, `completed_delayed`, `withdrawn`, `median_gain`, `median_delayed`, `artifact_factual_errors`, `preference_responses`, and `preference_followed`. Then run:
+
+```powershell
+.\.venv\Scripts\python.exe packages\evaluation\listener_study.py <aggregate-results.json>
+```
+
+The input file remains outside the repository. The command returns `pass`, `fail`, or `inconclusive` using the pre-registered rubric thresholds.
+
 ## Stop conditions
 
 - Stop if either packet contains a factual error, participants see both packets, assignment is not random, or the scorer learns condition labels before scoring.

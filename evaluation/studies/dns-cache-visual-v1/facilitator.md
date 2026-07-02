@@ -35,10 +35,10 @@ Factual grounding: cache reuse is supported by `knowledge/obsidian/sources/RFC 1
 
 ## Aggregate report template
 
-| Condition | Assigned | Completed immediate | Completed delayed | Withdrawn | Median pre (0–6) | Median post (0–6) | Median gain | Median delayed (0–4) | Factual errors | Preference followed |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| X control |  |  |  |  |  |  |  |  |  |  |
-| Y personalized |  |  |  |  |  |  |  |  |  |  |
+| Condition | Assigned | Completed immediate | Completed delayed | Withdrawn | Median pre (0–6) | Median post (0–6) | Median gain | Median delayed (0–4) | Artifact factual errors | Preference responses | Preference followed |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| X control |  |  |  |  |  |  |  |  |  |  |  |
+| Y personalized |  |  |  |  |  |  |  |  |  |  |  |
 
 Decision: Pass | Fail | Inconclusive
 
