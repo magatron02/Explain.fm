@@ -25,4 +25,4 @@ Record evidence-backed lessons from completed work. Do not use this file for pre
 - **Observation:** The concise option passed audio preference review but failed two comprehension checks. A more detailed three-state explanation then failed both text checks before rendering.
 - **Evidence:** `evaluation/metrics/thai-concise-personalization-v1.md` and `evaluation/metrics/thai-detailed-personalization-v1.md`.
 - **Lesson:** Shorter output, fewer terms, better audio, and greater detail are not substitutes for measured understanding.
-- **Resulting change:** Require a text comprehension pass before spending compute on personalized audio, and do not create a persistent listener profile from failed experiments.
+- **Resulting change:** Require a text comprehension pass before spending compute on personalized audio, do not create a persistent listener profile from failed experiments, and stop iterating on the same topic after the interactive scenario also fails.
